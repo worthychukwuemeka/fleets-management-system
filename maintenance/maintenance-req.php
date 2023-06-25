@@ -68,7 +68,7 @@
 <body>
   <!-- preloader -->
   <div class="preloader">
-    <img src="/assets/images/fleeets.png" alt="logo" />
+    <img src="../assets/images/fleeets.png" alt="logo" />
     <div class="preloader-icon"></div>
   </div>
   <!-- ./ preloader -->
@@ -388,7 +388,7 @@
               </div>
 
               <div class="avatar me-3">
-                <img src="/vehicles/assets/images/user/man_avatar3.jpg" class="rounded-circle" alt="image" />
+                <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="image" />
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end">
@@ -428,7 +428,7 @@
         <div class="card-body">
           <div class="d-md-flex gap-4 align-items-center">
             <div class="d-none d-md-flex">
-              <img src="/maintenance/assets/images/wrench.svg" alt="">
+              <img src="../maintenance/assets/images/wrench.svg" alt="">
               <h1 style="display: flex;
               width: 94.875px;
               height: 23.918px;
@@ -447,7 +447,7 @@
               font-size: 14px;
               font-weight: 400;">Total Requests</span></h1>
 
-<img src="/maintenance/assets/images/wrench.svg" alt="" style="margin-left: 135px;">
+<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
 <h1 style="display: flex;
 width: 94.875px;
 height: 23.918px;
@@ -466,7 +466,7 @@ color: #6B6B6B;
 font-size: 14px;
 font-weight: 400;">Opened Requests</span></h1>
 
-<img src="/maintenance/assets/images/wrench.svg" alt="" style="margin-left: 135px;">
+<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
 <h1 style="display: flex;
 width: 94.875px;
 height: 23.918px;
@@ -485,7 +485,7 @@ color: #6B6B6B;
 font-size: 14px;
 font-weight: 400;">Approved Requests</span></h1>
 
-<img src="/maintenance/assets/images/wrench.svg" alt="" style="margin-left: 135px;">
+<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
 <h1 style="display: flex;
 width: 94.875px;
 height: 23.918px;
@@ -520,7 +520,7 @@ font-weight: 400;">Rejected Requests</span></h1>
               <td style="display: grid;
               align-items: center;">
                 <figure class="avatar me-3">
-                  <img src="/maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
+                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
                     alt="avatar" />
                 </figure>
                 <h1 style="display: flex;
@@ -557,11 +557,13 @@ width: 111px;
 padding: 12px 39px;
 justify-content: center;
 align-items: center;
-gap: 8px;" 
+gap: 8px; background-color: #470a34;
+border-color: #470a34;" 
                 class="btn btn-secondary">Approve</button>
               </td>
               <td>
-                <button type="button" class="btn btn-secondary">Reject</button>
+                <button type="button" style="background-color: #470a34;
+border-color: #470a34;" class="btn btn-secondary">Reject</button>
               </td>
             </tr>
 
@@ -569,7 +571,7 @@ gap: 8px;"
               <td style="display: grid;
               align-items: center;">
                 <figure class="avatar me-3">
-                  <img src="/maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
+                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
                     alt="avatar" />
                 </figure>
                 <h1 style="display: flex;
@@ -606,11 +608,14 @@ width: 111px;
 padding: 12px 39px;
 justify-content: center;
 align-items: center;
-gap: 8px;" 
+gap: 8px;
+background-color: #470a34;
+border-color: #470a34;" 
                 class="btn btn-secondary">Approve</button>
               </td>
               <td>
-                <button type="button" class="btn btn-secondary">Reject</button>
+                <button type="button" style="background-color: #470a34;
+border-color: #470a34;" class="btn btn-secondary">Reject</button>
               </td>
             </tr>
 
@@ -618,7 +623,7 @@ gap: 8px;"
               <td style="display: grid;
               align-items: center;">
                 <figure class="avatar me-3">
-                  <img src="/maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
+                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
                     alt="avatar" />
                 </figure>
                 <h1 style="display: flex;
@@ -655,11 +660,13 @@ width: 111px;
 padding: 12px 39px;
 justify-content: center;
 align-items: center;
-gap: 8px;" 
+gap: 8px; background-color: #470a34;
+border-color: #470a34;" 
                 class="btn btn-secondary">Approve</button>
               </td>
               <td>
-                <button type="button" class="btn btn-secondary">Reject</button>
+                <button type="button" style="background-color: #470a34;
+border-color: #470a34;" class="btn btn-secondary">Reject</button>
               </td>
             </tr>
 
