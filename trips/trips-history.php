@@ -434,18 +434,18 @@ if (is_array($data_type)) {
               <td>
                 <a href="#">
                   <figure class="avatar me-3">
-                    <img src="../drivers/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
+                    <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Yusuf Musa
+                  Ayotunde Babalola
                 </a>
               </td>
-              <td>yusuf.musa@cu.edu.ng</td>
-              <td>081 567 2375</td>
+              <td>Senate Building</td>
+              <td>University Chapel</td>
               <td>
-                <span>Drop-off</span>
+                23/06/2023
               </td>
               <td class="text-end">
-                23/06 (Today)
+                <span class="badge bg-purple">Ongoing</span>
               </td>
              
             </tr>
@@ -454,18 +454,18 @@ if (is_array($data_type)) {
               <td>
                 <a href="#">
                   <figure class="avatar me-3">
-                    <img src="../drivers/assets/images/user/man_avatar4.jpg" class="rounded-circle" alt="avatar" />
+                    <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Bolu Aleoluwa
+                  Ayotunde Babalola
                 </a>
               </td>
-              <td>bolu.aleoluwa@cu.edu.ng</td>
-              <td>091 789 2456</td>
+              <td>Esther Hall</td>
+              <td>CST</td>
               <td>
-                <span>Pick up</span>
+                23/06/2023
               </td>
               <td class="text-end">
-                23/06 (Today)
+                <span class="badge bg-success">Completed</span>
               </td>
              
             </tr>
