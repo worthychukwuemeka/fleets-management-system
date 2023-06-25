@@ -19,23 +19,21 @@ if (is_array($data_type)) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Fleet Management System | Maintenance - History</title>
+  <title>Fleet Management System | Reports</title>
 
 
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap icons -->
-  <link rel="stylesheet" href="../dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
+  <link rel="stylesheet" href="./vehicles/dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
   <!-- Bootstrap Docs -->
-  <link rel="stylesheet" href="../dist/css/bootstrap-docs.css" type="text/css" />
+  <link rel="stylesheet" href="./dist/css/bootstrap-docs.css" type="text/css" />
 
   <!-- Slick -->
-  <link rel="stylesheet" href="../libs/slick/slick.css" type="text/css" />
+  <link rel="stylesheet" href="./libs/slick/slick.css" type="text/css" />
 
   <!-- Main style file -->
   <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css" />
@@ -259,13 +257,13 @@ if (is_array($data_type)) {
   </div>
   <!-- ./ notifications sidebar -->
 
-
+  <!-- ./ sidebars -->
 
   <!-- menu -->
   <div class="menu">
     <div class="menu-header">
       <a href="/index.php" class="menu-header-logo">
-        <img src="../assets/images/fleeets.png" alt="logo" />
+        <img src="./assets/fleeet.png" alt="logo" />
       </a>
       <a href="/index.php" class="btn btn-sm menu-close-btn">
         <i class="bi bi-x"></i>
@@ -284,7 +282,7 @@ if (is_array($data_type)) {
         </li>
 
         <li>
-          <a href="../vehicles/vehicles.php">
+          <a class="active" href="../vehicles/vehicles.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-car"></i>
             </span>
@@ -305,14 +303,14 @@ if (is_array($data_type)) {
             <span class="nav-link-icon">
               <i class="fa-solid fa-wrench"></i>
             </span>
-            <span style="color: #470A34;">Maintenance <i class="fa-solid fa-chevron-down"></i></span>
+            <span style="color: #470A34;">Maintenance<i class="fa-solid fa-chevron-down"></i> </span>
           </a>
           <ul>
             <li>
-              <a style="color: #470A34;" href="../maintenance/maintenance-req.php">View Requests</a>
+              <a href="../maintenance/maintenance-req.html">View Requests</a>
             </li>
             <li>
-              <a class="active" href="../maintenance/maintenance-history.php" style="color: #470A34;">View History</a>
+              <a href="../maintenance//maintenance-history.php">View History</a>
             </li>
           </ul>
         </li>
@@ -325,10 +323,10 @@ if (is_array($data_type)) {
           </a>
           <ul>
             <li>
-              <a href="../trips/trips-history.php">View History</a>
+              <a href="../maintenance/maintenance-req.html">View Requests</a>
             </li>
             <li>
-              <a href="../trips/trips-guest.html">View Guest Requests</a>
+              <a href="../maintenance/maintenance-history.php">View History</a>
             </li>
           </ul>
         </li>
@@ -364,55 +362,47 @@ if (is_array($data_type)) {
           <i class="bi bi-list"></i>
         </a>
       </div>
+
       <!-- Logo -->
       <a href="/index.php" class="logo">
-        <img width="100" src="../assets/images/fleeets.png" alt="logo" />
+        <img width="100" src="../assets/fleeets.png" alt="logo" />
       </a>
       <!-- ./ Logo -->
-      <div class="page-title">Maintenance History</div>
+
+      <div class="page-title">Vehicles</div>
 
       <div class="header-bar ms-auto">
         <ul class="navbar-nav justify-content-end">
-          <li class="nav-item">
+          <li class="nav-item" style="margin-right: 30px;">
             <a href="#" class="nav-link nav-link-notify" data-count="2" data-sidebar-target="#notifications">
               <i style="font-size: 20px;" class="fa-solid fa-bell"></i>
             </a>
           </li>
-
-          <!--Avatar-->
-          <div class="dropdown">
-            <a style="text-align: right;" href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
-              <div style="margin-right: 20px;">
-                <div class="fw-bold" style="color: #222222;"><?php echo $user_data["name"] ?></div>
-                <small class="text-muted"><?php echo $user_data["role"] ?></small>
-              </div>
-
-              <div class="avatar me-3">
-                <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="image" />
-              </div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-end">
-              <a href="#" class="dropdown-item d-flex align-items-center">
-                <i class="bi bi-person dropdown-item-icon"></i> Profile
-              </a>
-              <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
-                <i class="bi bi-gear dropdown-item-icon"></i> Settings
-              </a>
-            </div>
-          </div>
-
         </ul>
       </div>
-      <!-- Header mobile buttons -->
-      <div class="header-mobile-buttons">
-        <a href="#" class="search-bar-btn">
-          <i class="bi bi-search"></i>
+
+      <!--Avatar-->
+      <div class="dropdown">
+        <a style="text-align: right;" href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
+          <div style="margin-right: 20px;">
+            <div class="fw-bold" style="color: #222222;"><?php echo $user_data["name"] ?></div>
+            <small class="text-muted"><?php echo $user_data["role"] ?></small>
+          </div>
+
+          <div class="avatar me-3">
+            <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="image" />
+          </div>
         </a>
-        <a href="#" class="actions-btn">
-          <i class="bi bi-three-dots"></i>
-        </a>
+        <div class="dropdown-menu dropdown-menu-end">
+          <a href="#" class="dropdown-item d-flex align-items-center">
+            <i class="bi bi-person dropdown-item-icon"></i> Profile
+          </a>
+          <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
+            <i class="bi bi-gear dropdown-item-icon"></i> Settings
+          </a>
+        </div>
       </div>
-      <!-- ./ Header mobile buttons -->
+
     </div>
     <!-- ./ header -->
 
@@ -424,221 +414,96 @@ if (is_array($data_type)) {
           <button onclick="search()" class="search-button"><i class="fas fa-search"></i></button>
         </div>
       </div>
+
       <div class="card">
-        <div class="card-body">
-          <div class="d-md-flex gap-4 align-items-center">
-            <div class="d-none d-md-flex">
-              <img src="../maintenance/assets/images/wrench.svg" alt="">
-              <h1 style="display: flex;
-              width: 94.875px;
-              height: 23.918px;
-              flex-direction: column;
-              flex-shrink: 0; 
-              color: #222;
-              font-size: 20px;
-              font-weight: 700;
-              margin-left: 16px;
-              margin-bottom: 30px;">50 <span style="display: flex;
-              width: 137px;
-              height: 17px;
-              flex-direction: column;
-              flex-shrink: 0;
-              color: #6B6B6B;
-              font-size: 14px;
-              font-weight: 400;">Total Requests</span></h1>
-
-<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
-<h1 style="display: flex;
-width: 94.875px;
-height: 23.918px;
-flex-direction: column;
-flex-shrink: 0; 
-color: #222;
-font-size: 20px;
-font-weight: 700;
-margin-left: 16px;
-margin-bottom: 30px;">50 <span style="display: flex;
-width: 137px;
-height: 17px;
-flex-direction: column;
-flex-shrink: 0;
-color: #6B6B6B;
-font-size: 14px;
-font-weight: 400;">Opened Requests</span></h1>
-
-<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
-<h1 style="display: flex;
-width: 94.875px;
-height: 23.918px;
-flex-direction: column;
-flex-shrink: 0; 
-color: #222;
-font-size: 20px;
-font-weight: 700;
-margin-left: 16px;
-margin-bottom: 30px;">25 <span style="display: flex;
-width: 137px;
-height: 17px;
-flex-direction: column;
-flex-shrink: 0;
-color: #6B6B6B;
-font-size: 14px;
-font-weight: 400;">Approved Requests</span></h1>
-
-<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
-<h1 style="display: flex;
-width: 94.875px;
-height: 23.918px;
-flex-direction: column;
-flex-shrink: 0; 
-color: #222;
-font-size: 20px;
-font-weight: 700;
-margin-left: 16px;
-margin-bottom: 30px;">25 <span style="display: flex;
-width: 137px;
-height: 17px;
-flex-direction: column;
-flex-shrink: 0;
-color: #6B6B6B;
-font-size: 14px;
-font-weight: 400;">Rejected Requests</span></h1>
+    <div class="card-body">
+      <div class="d-md-flex gap-4 align-items-center">
+        <div class="d-none d-md-flex">Sort By</div>
+        <div class="d-md-flex gap-4 align-items-center">
+          <form class="mb-3 mb-md-0">
+            <div class="row g-3">
+              <div class="col-md-3">
+                <select id="statusFilter" class="form-select">
+                  <option value="all">All</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                  <option value="outofserv">Out of Service</option>
+                </select>
+              </div>
             </div>
-          </div>
-
-          
+          </form>
+        </div>
+        <div class="dropdown ms-auto">
+          <a href="#" class="btn btn-primary" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-plus"></i> Add New Vehicle</a>
         </div>
       </div>
-
-      <div class="table-responsive">
-        <table id="drivers" class="table table-custom table-lg">
-          <thead>
-            <tr>
-              <th>Vehicle</th>
-              <th>Description</th>
-              <th>Date</th>
-              <th class="text-end">Reported By</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="display: grid;
-              align-items: center;">
-                
-                <h1 style="display: flex;
-              width: 94.875px;
-              height: 23.918px;
-              flex-direction: column;
-              flex-shrink: 0; 
-              color: #222;
-              font-size: 20px;
-              font-weight: 500;
-              margin-left: 56px;
-              margin-bottom: 56px;">Brake Light <span style="display: flex;
-              width: 137px;
-              height: 17px;
-              flex-direction: column;
-              flex-shrink: 0;
-              color: #6B6B6B;
-              font-size: 14px;
-              font-weight: 400;">123CUF Toyota Corolla</span></h1>
-                
-              </td>
-              <td style="color: #222;
-              font-size: 16px;
-              line-height: 142.023%;
-              gap: -16px;">
-                Driver's side brake light is out
-              </td>
-              
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: grid;
-              align-items: center;">
-                
-                <h1 style="display: flex;
-              width: 94.875px;
-              height: 23.918px;
-              flex-direction: column;
-              flex-shrink: 0; 
-              color: #222;
-              font-size: 20px;
-              font-weight: 500;
-              margin-left: 56px;
-              margin-bottom: 56px;">Brake Light <span style="display: flex;
-              width: 137px;
-              height: 17px;
-              flex-direction: column;
-              flex-shrink: 0;
-              color: #6B6B6B;
-              font-size: 14px;
-              font-weight: 400;">123CUF Toyota Corolla</span></h1>
-                
-              </td>
-              <td style="color: #222;
-              font-size: 16px;
-              line-height: 142.023%;
-              gap: -16px;">
-                Driver's side brake light is out
-              </td>
-              
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-
-            <tr>
-              <td style="display: grid;
-              align-items: center;">
-                
-                <h1 style="display: flex;
-              width: 94.875px;
-              height: 23.918px;
-              flex-direction: column;
-              flex-shrink: 0; 
-              color: #222;
-              font-size: 20px;
-              font-weight: 500;
-              margin-left: 56px;
-              margin-bottom: 56px;">Brake Light <span style="display: flex;
-              width: 137px;
-              height: 17px;
-              flex-direction: column;
-              flex-shrink: 0;
-              color: #6B6B6B;
-              font-size: 14px;
-              font-weight: 400;">123CUF Toyota Corolla</span></h1>
-                
-              </td>
-              <td style="color: #222;
-              font-size: 16px;
-              line-height: 142.023%;
-              gap: -16px;">
-                Driver's side brake light is out
-              </td>
-              
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
     </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-custom table-lg mb-0" id="Vehicles">
+      <thead>
+        <tr>
+          <th>Plate Number</th>
+          <th>Name</th>
+          <th>Make</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th class="text-end">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+      <?php
+        $statusFilter = isset($_POST['status']) ? $_POST['status'] : 'all';
+
+        // Sample vehicle data
+        $vehicles = array(
+          array('LSD675RV', 'Toyota Corolla', 'Toyota', 'Car', 'Active'),
+          array('123CU5RV', 'Toyota Camry', 'Toyota', 'Car', 'Active'),
+          array('GHK236LI', 'Nissan Quest', 'Nissan', 'Van', 'Inactive'),
+          array('KUF128SG', 'Toyota Corolla', 'Toyota', 'Car', 'Inactive'),
+          array('MUK249DC', 'Toyota Corolla', 'Toyota', 'Car', 'Inactive')
+        );
+
+        // Filter the vehicles based on the selected status
+        if ($statusFilter != 'all') {
+          $filteredVehicles = array_filter($vehicles, function ($vehicle) use ($statusFilter) {
+            return $vehicle[4] == $statusFilter;
+          });
+        } else {
+          $filteredVehicles = $vehicles;
+        }
+
+        // Helper function to get the badge class based on status
+        function getStatusBadgeClass($status)
+        {
+          if ($status == 'Active') {
+            return 'bg-success';
+          } elseif ($status == 'Inactive') {
+            return 'bg-danger';
+          } elseif ($status == 'Out of Service') {
+            return 'bg-warning';
+          } else {
+            return 'bg-secondary';
+          }
+        }
+
+        // Generate the HTML table rows
+        foreach ($filteredVehicles as $vehicle) {
+          echo '<tr>';
+          echo '<td><a href="#">' . $vehicle[0] . '</a></td>';
+          echo '<td>' . $vehicle[1] . '</td>';
+          echo '<td>' . $vehicle[2] . '</td>';
+          echo '<td>' . $vehicle[3] . '</td>';
+          echo '<td><span class="badge ' . getStatusBadgeClass($vehicle[4]) . '">' . $vehicle[4] . '</span></td>';
+          echo '<td><span><i style="display: flex; font-size: 25px; color: #00BB90; flex-direction: row; justify-content: flex-end; align-items: center; padding: 0px; gap: 15px; cursor: pointer;" class="fa-solid fa-pen-to-square"></i></span></td>';
+          echo '<td><i id="deleteButton" style="display: flex; font-size: 25px; color: #BB0000; flex-direction: row; justify-content: flex-start; align-items: center; padding: 0px; gap: 5px; cursor: pointer;" class="fa-solid fa-trash-can"></i></td>';
+          echo '</tr>';
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
     <!-- ./ content -->
 
     <!-- content-footer -->
@@ -658,17 +523,56 @@ font-weight: 400;">Rejected Requests</span></h1>
   </div>
   <!-- ./ layout-wrapper -->
 
+  <!--Delete button function-->
+  <script>
+    // Select the delete button element
+    var deleteButton = document.getElementById('deleteButton');
+
+    // Attach an event listener to the delete button
+    deleteButton.addEventListener('click', deleteFunction);
+
+    // Define the delete function
+    function deleteFunction() {
+      // Display an alert message when the delete button is clicked
+      alert('Delete button clicked!');
+    }
+  </script>
+
   <!-- Bundle scripts -->
   <script src="../libs/bundle.js"></script>
 
   <!-- Examples -->
-  <script src="../dist/js/examples/users.js"></script>
+  <script src="../dist/js/examples/orders.js"></script>
 
   <!-- Main Javascript file -->
   <script src="../dist/js/app.min.js"></script>
 
   <!--Font awesome link-->
   <script src="https://kit.fontawesome.com/08d9b1877f.js" crossorigin="anonymous"></script>
+
+  <!--JQuery link-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    // Add event listener for status filter change
+    document.getElementById('statusFilter').addEventListener('change', function() {
+      // Get the selected status value
+      var status = this.value;
+
+      // Send an AJAX request to the server to filter vehicles
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // Update the table body with the filtered data
+          document.querySelector('#Vehicles tbody').innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open('POST', 'vehicle-filter.php', true);
+      xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      xhr.send('status=' + status);
+    });
+  </script>
+
 </body>
 
 </html>

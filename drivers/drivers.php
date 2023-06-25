@@ -329,7 +329,7 @@ if (is_array($data_type)) {
           </ul>
         </li>
         <li>
-          <a href="#">
+          <a href="../reports/reports.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-file-invoice"></i>
             </span>
@@ -337,7 +337,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="./index.php">
+          <a href="/index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>
