@@ -209,14 +209,7 @@ if (is_array($data_type)) {
               </li>
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
 
         <div class="tab-pane" id="alerts">
@@ -259,14 +252,7 @@ if (is_array($data_type)) {
 
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
       </div>
     </div>
@@ -281,7 +267,7 @@ if (is_array($data_type)) {
       <a href="/index.php" class="menu-header-logo">
         <img src="../assets/images/fleeets.png" alt="logo" />
       </a>
-      <a href="index.html" class="btn btn-sm menu-close-btn">
+      <a href="/index.php" class="btn btn-sm menu-close-btn">
         <i class="bi bi-x"></i>
       </a>
     </div>
@@ -339,7 +325,7 @@ if (is_array($data_type)) {
           </a>
           <ul>
             <li>
-              <a href="../trips/trips-history.html">View History</a>
+              <a href="../trips/trips-history.php">View History</a>
             </li>
             <li>
               <a href="../trips/trips-guest.html">View Guest Requests</a>
@@ -398,7 +384,7 @@ if (is_array($data_type)) {
             <a style="text-align: right;" href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
               <div style="margin-right: 20px;">
                 <div class="fw-bold" style="color: #222222;"><?php echo $user_data["name"] ?></div>
-                <small class="text-muted"><?php echo $user_data["name"] ?></small>
+                <small class="text-muted"><?php echo $user_data["role"] ?></small>
               </div>
 
               <div class="avatar me-3">

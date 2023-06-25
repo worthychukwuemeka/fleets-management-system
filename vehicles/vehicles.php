@@ -207,14 +207,7 @@ if (is_array($data_type)) {
               </li>
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
 
         <div class="tab-pane" id="alerts">
@@ -257,14 +250,7 @@ if (is_array($data_type)) {
 
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
       </div>
     </div>
@@ -276,10 +262,10 @@ if (is_array($data_type)) {
   <!-- menu -->
   <div class="menu">
     <div class="menu-header">
-      <a href="index.html" class="menu-header-logo">
+      <a href="/index.php" class="menu-header-logo">
         <img src="./assets/fleeet.png" alt="logo" />
       </a>
-      <a href="index.html" class="btn btn-sm menu-close-btn">
+      <a href="/index.php" class="btn btn-sm menu-close-btn">
         <i class="bi bi-x"></i>
       </a>
     </div>
@@ -353,7 +339,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="../index.php">
+          <a href="./index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>
@@ -378,7 +364,7 @@ if (is_array($data_type)) {
       </div>
 
       <!-- Logo -->
-      <a href="index.html" class="logo">
+      <a href="/index.php" class="logo">
         <img width="100" src="../assets/fleeets.png" alt="logo" />
       </a>
       <!-- ./ Logo -->

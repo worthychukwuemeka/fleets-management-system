@@ -182,14 +182,7 @@ if(is_array($data_type)){
               </li>
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
 
         <div class="tab-pane" id="alerts">
@@ -232,14 +225,7 @@ if(is_array($data_type)){
 
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
       </div>
     </div>
@@ -251,10 +237,10 @@ if(is_array($data_type)){
   <!-- menu -->
   <div class="menu">
     <div class="menu-header">
-      <a href="./index.php" class="menu-header-logo">
+      <a href="/index.php" class="menu-header-logo">
         <img src="./assets/images/fleeets.png" alt="logo" />
       </a>
-      <a href="./index.php" class="btn btn-sm menu-close-btn">
+      <a href="/index.php" class="btn btn-sm menu-close-btn">
         <i class="bi bi-x"></i>
       </a>
     </div>
@@ -312,7 +298,7 @@ if(is_array($data_type)){
           </a>
           <ul>
             <li>
-              <a href="./trips/trips-history.html">View History</a>
+              <a href="./trips/trips-history.php">View History</a>
             </li>
             <li>
               <a href="./trips/trips-guest.html">View Guest Requests</a>
@@ -328,7 +314,7 @@ if(is_array($data_type)){
           </a>
         </li>
         <li>
-          <a href="./index.php">
+          <a href="/index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>
@@ -387,7 +373,7 @@ if(is_array($data_type)){
           <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
             <i class="bi bi-gear dropdown-item-icon"></i> Settings
           </a>
-          <a href="./index.php" class="dropdown-item d-flex align-items-center text-danger" target="_blank">
+          <a href="/index.php" class="dropdown-item d-flex align-items-center text-danger" target="_blank">
             <i class="bi bi-box-arrow-right dropdown-item-icon"></i> Logout
           </a>
         </div>
@@ -690,7 +676,7 @@ if(is_array($data_type)){
               </h6>
               <div class="d-flex gap-3 align-items-center ms-auto">
                 <div class="dropdown">
-                  <a href="./trips/trips-history.html" class="btn btn-sm" 
+                  <a href="./trips/trips-history.php" class="btn btn-sm" 
                   aria-haspopup="true" aria-expanded="false"
                   style="color: #00BB90; text-decoration: underline;">
                     View All

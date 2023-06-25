@@ -1,3 +1,17 @@
+<?php
+
+include("../php_DB/connect.php");
+include("../php_DB/profiles.php");
+
+$id = 1111;
+$type = new Profiles();
+$data_type = $type->get_user_table($id);
+
+if (is_array($data_type)) {
+  $user_data = $data_type[0];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,26 +19,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Fleet Management System | Drivers</title>
+  <title>Fleet Management System | Trips - Guests</title>
 
 
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap icons -->
-  <link rel="stylesheet" href="/vehicles/dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
+  <link rel="stylesheet" href="../vehicles/dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
   <!-- Bootstrap Docs -->
-  <link rel="stylesheet" href="/dist/css/bootstrap-docs.css" type="text/css" />
+  <link rel="stylesheet" href="../dist/css/bootstrap-docs.css" type="text/css" />
 
   <!-- Slick -->
-  <link rel="stylesheet" href="/libs/slick/slick.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/slick/slick.css" type="text/css" />
 
   <!-- Main style file -->
-  <link rel="stylesheet" href="/dist/css/app.min.css" type="text/css" />
+  <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css" />
 
   <!--Hidden bootstrap style elements (Hid it because it is creating a pop up on the webpage that is not neccessary)-->
   <style>
@@ -68,7 +80,7 @@
 <body>
   <!-- preloader -->
   <div class="preloader">
-    <img src="/assets/images/fleeets.png" alt="logo" />
+    <img src="../assets/images/fleeets.png" alt="logo" />
     <div class="preloader-icon"></div>
   </div>
   <!-- ./ preloader -->
@@ -195,14 +207,7 @@
               </li>
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+
         </div>
 
         <div class="tab-pane" id="alerts">
@@ -245,14 +250,7 @@
 
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -262,10 +260,10 @@
   <!-- menu -->
   <div class="menu">
     <div class="menu-header">
-      <a href="index.html" class="menu-header-logo">
-        <img src="../../assets/images/fleeets.png" alt="logo" />
+      <a href="/index.php" class="menu-header-logo">
+        <img src="../assets/images/fleeets.png" alt="logo" />
       </a>
-      <a href="index.html" class="btn btn-sm menu-close-btn">
+      <a href="/index.php" class="btn btn-sm menu-close-btn">
         <i class="bi bi-x"></i>
       </a>
     </div>
@@ -273,7 +271,7 @@
 
       <ul id="navLinks">
         <li>
-          <a href="/fleet-manager-dashboard.html">
+          <a href="./fleet-manager-dashboard.html">
             <span class="nav-link-icon">
               <i class="fa-solid fa-gauge"></i>
             </span>
@@ -282,7 +280,7 @@
         </li>
 
         <li>
-          <a href="/vehicles/vehicles.html">
+          <a href="../vehicles/vehicles.html">
             <span class="nav-link-icon">
               <i class="fa-solid fa-car"></i>
             </span>
@@ -291,7 +289,7 @@
 
         </li>
         <li>
-          <a class="active" href="#">
+          <a href="../drivers/drivers.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-users"></i>
             </span>
@@ -307,10 +305,10 @@
           </a>
           <ul>
             <li>
-              <a href="/maintenance/maintenance-req.html">View Requests</a>
+              <a href="../maintenance/maintenance-req.html">View Requests</a>
             </li>
             <li>
-              <a href="#">View History</a>
+              <a href="../maintenance//maintenance-history.php">View History</a>
             </li>
           </ul>
         </li>
@@ -323,10 +321,10 @@
           </a>
           <ul>
             <li>
-              <a href="/trips/trips-history.html">View History</a>
+              <a href="../trips/trips-history.php">View History</a>
             </li>
             <li>
-              <a href="/trips/trips-guest.html">View Guest Requests</a>
+              <a class="active" style="color: #470A34;" href="../trips/trips-guest.php">View Guest Requests</a>
             </li>
           </ul>
         </li>
@@ -363,8 +361,8 @@
         </a>
       </div>
       <!-- Logo -->
-      <a href="index.html" class="logo">
-        <img width="100" src="/assets/images/fleeets.png" alt="logo" />
+      <a href="/index.php" class="logo">
+        <img width="100" src="../assets/images/fleeets.png" alt="logo" />
       </a>
       <!-- ./ Logo -->
       <div class="page-title">Drivers</div>
@@ -381,12 +379,12 @@
           <div class="dropdown">
             <a style="text-align: right;" href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
               <div style="margin-right: 20px;">
-                <div class="fw-bold" style="color: #222222;">Philip Nwachukwu</div>
-                <small class="text-muted">Fleet Manager</small>
+                <div class="fw-bold" style="color: #222222;"><?php echo $user_data["name"] ?></div>
+                <small class="text-muted"><?php echo $user_data["role"] ?></small>
               </div>
 
               <div class="avatar me-3">
-                <img src="/vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="image" />
+                <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="image" />
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end">
@@ -422,31 +420,6 @@
           <button onclick="search()" class="search-button"><i class="fas fa-search"></i></button>
         </div>
       </div>
-      <div class="card">
-        <div class="card-body">
-          <div class="d-md-flex gap-4 align-items-center">
-            <div class="d-none d-md-flex">Sort By</div>
-            <div class="d-md-flex gap-4 align-items-center">
-              <form class="mb-3 mb-md-0">
-                <div class="row g-3">
-                  <div class="col-md-3">
-                    <select class="form-select">
-                      <option value="active">Active</option>
-                      <option value="inactive">Inactive</option>
-                    </select>
-                  </div>
-
-                </div>
-              </form>
-            </div>
-            <div class="dropdown ms-auto">
-              <a href="#" class="btn btn-primary" aria-haspopup="true" aria-expanded="false"><i
-                  class="fa-solid fa-plus"></i> Add New Driver</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="table-responsive">
         <table id="drivers" class="table table-custom table-lg">
@@ -455,8 +428,8 @@
               <th>Name</th>
               <th>Email</th>
               <th>Phone</th>
-              <th>Status</th>
-              <th class="text-end">Action</th>
+              <th>Type</th>
+              <th class="text-end">Date</th>
             </tr>
           </thead>
           <tbody>
@@ -466,40 +439,16 @@
                   <figure class="avatar me-3">
                     <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Ayotunde Babalola
+                  Yusuf Musa
                 </a>
               </td>
-              <td>ayotunde.babalola@cu.edu.ng</td>
-              <td>07011772239</td>
+              <td>yusuf.musa@cu.edu.ng</td>
+              <td>07023452617</td>
               <td>
-                <span class="badge bg-danger">Inactive</span>
+                Drop-off
               </td>
               <td>
-                <span>
-                  <i style="display: flex;
-                  font-size: 25px;
-                  color: #00BB90;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 15px;
-                  cursor: pointer;" 
-                  class="fa-solid fa-pen-to-square"></i>
-                </span>
-              </td>
-              <td>
-                <i
-                  style="display: flex;
-                  font-size: 25px;
-                  color: #BB0000;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 5px;
-                  cursor: pointer;"
-                  class="fa-solid fa-trash-can"></i>
+                Today
               </td>
             </tr>
             <tr>
@@ -508,40 +457,16 @@
                   <figure class="avatar me-3">
                     <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Ayotunde Babalola
+                  David Babatunde
                 </a>
               </td>
-              <td>ayotunde.babalola@cu.edu.ng</td>
-              <td>07011772239</td>
+              <td>david.babatunde@cu.edu.ng</td>
+              <td>09124357835</td>
               <td>
-                <span class="badge bg-danger">Inactive</span>
+                Drop-off
               </td>
               <td>
-                <span>
-                  <i style="display: flex;
-                  font-size: 25px;
-                  color: #00BB90;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 15px;
-                  cursor: pointer;" 
-                  class="fa-solid fa-pen-to-square"></i>
-                </span>
-              </td>
-              <td>
-                <i
-                  style="display: flex;
-                  font-size: 25px;
-                  color: #BB0000;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 5px;
-                  cursor: pointer;"
-                  class="fa-solid fa-trash-can"></i>
+                Today
               </td>
             </tr>
             <tr>
@@ -550,40 +475,16 @@
                   <figure class="avatar me-3">
                     <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Ayotunde Babalola
+                  John Mark
                 </a>
               </td>
-              <td>ayotunde.babalola@cu.edu.ng</td>
-              <td>07011772239</td>
+              <td>john.mark@cu.edu.ng</td>
+              <td>08033446723</td>
               <td>
-                <span class="badge bg-danger">Inactive</span>
+                Drop-off
               </td>
               <td>
-                <span>
-                  <i style="display: flex;
-                  font-size: 25px;
-                  color: #00BB90;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 15px;
-                  cursor: pointer;" 
-                  class="fa-solid fa-pen-to-square"></i>
-                </span>
-              </td>
-              <td>
-                <i
-                  style="display: flex;
-                  font-size: 25px;
-                  color: #BB0000;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 5px;
-                  cursor: pointer;"
-                  class="fa-solid fa-trash-can"></i>
+                Today
               </td>
             </tr>
             <tr>
@@ -592,40 +493,16 @@
                   <figure class="avatar me-3">
                     <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Ayotunde Babalola
+                  Kelvin Sadiq
                 </a>
               </td>
-              <td>ayotunde.babalola@cu.edu.ng</td>
-              <td>07011772239</td>
+              <td>kelvin.sadiq@cu.edu.ng</td>
+              <td>09122367892</td>
               <td>
-                <span class="badge bg-danger">Inactive</span>
+                Drop-off
               </td>
               <td>
-                <span>
-                  <i style="display: flex;
-                  font-size: 25px;
-                  color: #00BB90;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 15px;
-                  cursor: pointer;" 
-                  class="fa-solid fa-pen-to-square"></i>
-                </span>
-              </td>
-              <td>
-                <i
-                  style="display: flex;
-                  font-size: 25px;
-                  color: #BB0000;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 5px;
-                  cursor: pointer;"
-                  class="fa-solid fa-trash-can"></i>
+                Today
               </td>
             </tr>
             <tr>
@@ -634,149 +511,21 @@
                   <figure class="avatar me-3">
                     <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Ayotunde Babalola
+                  Mary Joseph
                 </a>
               </td>
-              <td>ayotunde.babalola@cu.edu.ng</td>
-              <td>07011772239</td>
+              <td>mary.joseph@cu.edu.ng</td>
+              <td>07023678991</td>
               <td>
-                <span class="badge bg-danger">Inactive</span>
+                Drop-off
               </td>
               <td>
-                <span>
-                  <i style="display: flex;
-                  font-size: 25px;
-                  color: #00BB90;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 15px;
-                  cursor: pointer;" 
-                  class="fa-solid fa-pen-to-square"></i>
-                </span>
-              </td>
-              <td>
-                <i
-                  style="display: flex;
-                  font-size: 25px;
-                  color: #BB0000;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 5px;
-                  cursor: pointer;"
-                  class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#">
-                  <figure class="avatar me-3">
-                    <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
-                  </figure>
-                  Ayotunde Babalola
-                </a>
-              </td>
-              <td>ayotunde.babalola@cu.edu.ng</td>
-              <td>07011772239</td>
-              <td>
-                <span class="badge bg-danger">Inactive</span>
-              </td>
-              <td>
-                <span>
-                  <i style="display: flex;
-                  font-size: 25px;
-                  color: #00BB90;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 15px;
-                  cursor: pointer;" 
-                  class="fa-solid fa-pen-to-square"></i>
-                </span>
-              </td>
-              <td>
-                <i
-                  style="display: flex;
-                  font-size: 25px;
-                  color: #BB0000;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 5px;
-                  cursor: pointer;"
-                  class="fa-solid fa-trash-can"></i>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a href="#">
-                  <figure class="avatar me-3">
-                    <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
-                  </figure>
-                  Ayotunde Babalola
-                </a>
-              </td>
-              <td>ayotunde.babalola@cu.edu.ng</td>
-              <td>07011772239</td>
-              <td>
-                <span class="badge bg-danger">Inactive</span>
-              </td>
-              <td>
-                <span>
-                  <i style="display: flex;
-                  font-size: 25px;
-                  color: #00BB90;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 15px;
-                  cursor: pointer;" 
-                  class="fa-solid fa-pen-to-square"></i>
-                </span>
-              </td>
-              <td>
-                <i
-                  style="display: flex;
-                  font-size: 25px;
-                  color: #BB0000;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  padding: 0px;
-                  gap: 5px;
-                  cursor: pointer;"
-                  class="fa-solid fa-trash-can"></i>
+                Today
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-
-      <nav class="mt-4" aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
     <!-- ./ content -->
 
@@ -798,13 +547,13 @@
   <!-- ./ layout-wrapper -->
 
   <!-- Bundle scripts -->
-  <script src="../../libs/bundle.js"></script>
+  <script src="../libs/bundle.js"></script>
 
   <!-- Examples -->
-  <script src="../../dist/js/examples/users.js"></script>
+  <script src="../dist/js/examples/users.js"></script>
 
   <!-- Main Javascript file -->
-  <script src="../../dist/js/app.min.js"></script>
+  <script src="../dist/js/app.min.js"></script>
 
   <!--Font awesome link-->
   <script src="https://kit.fontawesome.com/08d9b1877f.js" crossorigin="anonymous"></script>

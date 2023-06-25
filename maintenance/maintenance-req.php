@@ -1,3 +1,17 @@
+<?php
+
+include("../php_DB/connect.php");
+include("../php_DB/profiles.php");
+
+$id = 1111;
+$type = new Profiles();
+$data_type = $type->get_user_table($id);
+
+if (is_array($data_type)) {
+  $user_data = $data_type[0];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -195,14 +209,7 @@
               </li>
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
 
         <div class="tab-pane" id="alerts">
@@ -245,14 +252,7 @@
 
             </ul>
           </div>
-          <div class="tab-pane-footer">
-            <a href="#" class="btn btn-success">
-              <i class="bi bi-check2 me-2"></i> Make All Read
-            </a>
-            <a href="#" class="btn btn-danger ms-2">
-              <i class="bi bi-trash me-2"></i> Delete all
-            </a>
-          </div>
+           
         </div>
       </div>
     </div>
@@ -264,10 +264,10 @@
   <!-- menu -->
   <div class="menu">
     <div class="menu-header">
-      <a href="index.html" class="menu-header-logo">
+      <a href="/index.php" class="menu-header-logo">
         <img src="../assets/images/fleeets.png" alt="logo" />
       </a>
-      <a href="index.html" class="btn btn-sm menu-close-btn">
+      <a href="/index.php" class="btn btn-sm menu-close-btn">
         <i class="bi bi-x"></i>
       </a>
     </div>
@@ -325,7 +325,7 @@
           </a>
           <ul>
             <li>
-              <a href="../trips/trips-history.html">View History</a>
+              <a href="../trips/trips-history.php">View History</a>
             </li>
             <li>
               <a href="../trips/trips-guest.html">View Guest Requests</a>
@@ -341,7 +341,7 @@
           </a>
         </li>
         <li>
-          <a href="./index.php">
+          <a href="/index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>
@@ -365,8 +365,8 @@
         </a>
       </div>
       <!-- Logo -->
-      <a href="index.html" class="logo">
-        <img width="100" src="/assets/images/fleeets.png" alt="logo" />
+      <a href="/index.php" class="logo">
+        <img width="100" src="../assets/images/fleeets.png" alt="logo" />
       </a>
       <!-- ./ Logo -->
       <div class="page-title">Maintenance Requests</div>
@@ -383,8 +383,8 @@
           <div class="dropdown">
             <a style="text-align: right;" href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
               <div style="margin-right: 20px;">
-                <div class="fw-bold" style="color: #222222;">Philip Nwachukwu</div>
-                <small class="text-muted">Fleet Manager</small>
+                <div class="fw-bold" style="color: #222222;"><?php echo $user_data["name"] ?></div>
+                <small class="text-muted"><?php echo $user_data["role"] ?></small>
               </div>
 
               <div class="avatar me-3">
