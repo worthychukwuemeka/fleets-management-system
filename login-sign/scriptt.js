@@ -20,6 +20,6 @@ function redirectToDashboard() {
   if (selectedUserType === "fleet-manager") {
     window.location.href = "fleet-manager-dashboard.php";
   } else if (selectedUserType === "driver") {
-    window.location.href = "driver-dashboard.php";
+    window.location.href = "./driver-dashboard.php";
   }
 }

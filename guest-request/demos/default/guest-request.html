@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fleet Management System | Drivers</title>
+  
+  
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="/vehicles/dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
+    <!-- Bootstrap Docs -->
+    <link rel="stylesheet" href="/dist/css/bootstrap-docs.css" type="text/css" />
+  
+    <!-- Slick -->
+    <link rel="stylesheet" href="/libs/slick/slick.css" type="text/css" />
+  
+    <!-- Main style file -->
+    <link rel="stylesheet" href="/dist/css/app.min.css" type="text/css" />
+  
+    <!--Hidden bootstrap style elements (Hid it because it is creating a pop up on the webpage that is not neccessary)-->
+    <style>
+      .item-action-buttons {
+        display: none;
+        visibility: hidden;
+      }
+  
+      .search-form {
+        display: inline-block;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #f1f1f1;
+      }
+  
+      .search-input {
+        width: 200px;
+        height: 40px;
+        border: none;
+        padding: 8px;
+        border-radius: 20px 0 0 20px;
+      }
+  
+      .search-button {
+        width: 80px;
+        background-color: #470A34;
+        color: #fff;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        padding: 10px;
+        cursor: pointer;
+      }
+  
+      .search-button:hover {
+        background-color: #845C78;
+      }
+    </style>
+  
+  </head>
+  
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <img src="/assets/images/fleeets.png" alt="logo" />
+      <div class="preloader-icon"></div>
+    </div>
+    <!-- ./ preloader -->
+
+    <!-- sidebars -->
+
+    <!-- notifications sidebar -->
+  <div class="sidebar" id="notifications">
+    <div class="sidebar-header d-block align-items-end">
+      <div class="align-items-center d-flex justify-content-between py-4">
+        Notifications
+        <button data-sidebar-close>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active nav-link-notify" data-bs-toggle="tab" href="#activities">Actions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#alerts">Alerts</a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-content">
+      <div class="tab-content">
+        <div class="tab-pane active" id="activities">
+          <div class="tab-pane-body">
+            <ul class="list-group list-group-flush">
+              <li class="px-0 list-group-item">
+                <a href="#" class="d-flex">
+                  <div class="flex-shrink-0">
+                    <figure class="avatar avatar-info me-3">
+                      <span class="avatar-text rounded-circle">
+                        <i class="fa-solid fa-user"></i>
+                      </span>
+                    </figure>
+                  </div>
+                  <div class="flex-grow-1">
+                    <p class="mb-0 fw-bold d-flex justify-content-between">
+                      You added a new car: Toyota Corolla
+                    </p>
+                    <span class="text-muted small">
+                      <i class="fa-regular fa-clock"></i> Today
+                    </span>
+                  </div>
+                </a>
+              </li>
+              <li class="px-0 list-group-item">
+                <a href="#" class="d-flex">
+                  <div class="flex-shrink-0">
+                    <figure class="avatar avatar-warning me-3">
+                      <span class="avatar-text rounded-circle">
+                        <i class="fa-solid fa-ban" style="color: #ffffff;"></i>
+                      </span>
+                    </figure>
+                  </div>
+                  <div class="flex-grow-1">
+                    <p class="mb-0 fw-bold d-flex justify-content-between">
+                      A trip got cancelled
+                    </p>
+                    <span class="text-muted small">
+                      <i class="fa-regular fa-clock"></i> Today
+                    </span>
+                  </div>
+                </a>
+              </li>
+              <li class="px-0 list-group-item">
+                <a href="#" class="d-flex">
+                  <div class="flex-shrink-0">
+                    <figure class="avatar avatar-secondary me-3">
+                      <span class="avatar-text rounded-circle">
+                        <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                      </span>
+                    </figure>
+                  </div>
+                  <div class="flex-grow-1">
+                    <p class="mb-0 d-flex justify-content-between">
+                      1 person gave a car review
+                    </p>
+                    <span class="text-muted small">
+                      <i class="fa-regular fa-clock"></i> Yesterday
+                    </span>
+                  </div>
+                </a>
+              </li>
+              <li class="px-0 list-group-item">
+                <a href="#" class="d-flex">
+                  <div class="flex-shrink-0">
+                    <figure class="avatar avatar-success me-3">
+                      <span class="avatar-text rounded-circle">
+                        <i class="fa-solid fa-file-invoice"></i>
+                      </span>
+                    </figure>
+                  </div>
+                  <div class="flex-grow-1">
+                    <p class="mb-0 d-flex justify-content-between">
+                      Reports ready to download
+                    </p>
+                    <span class="text-muted small">
+                      <i class="fa-regular fa-clock"></i> Yesterday
+                    </span>
+                  </div>
+                </a>
+              </li>
+              <li class="px-0 list-group-item">
+                <a href="#" class="d-flex">
+                  <div class="flex-shrink-0">
+                    <figure class="avatar avatar-info me-3">
+                      <span class="avatar-text rounded-circle">
+                        <i class="fa-solid fa-lock" style="color: #ffffff;"></i>
+                      </span>
+                    </figure>
+                  </div>
+                  <div class="flex-grow-1">
+                    <p class="mb-0 d-flex justify-content-between">
+                      2 steps verification
+                    </p>
+                    <span class="text-muted small">
+                      <i class="fa-regular fa-clock"></i> 20 min ago
+                    </span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+           
+        </div>
+
+        <div class="tab-pane" id="alerts">
+          <div class="tab-pane-body">
+            <ul class="list-group list-group-flush">
+              <li class="px-0 list-group-item d-flex">
+                <div class="flex-shrink-0">
+                  <figure class="avatar avatar-warning me-3">
+                    <span class="avatar-text rounded-circle">
+                      <i class="fa-solid fa-lock" style="color: #ffffff;"></i>
+                    </span>
+                  </figure>
+                </div>
+                <div class="flex-grow-1">
+                  <p class="mb-0 fw-bold d-flex justify-content-between">
+                    Signed in with a different device.
+                  </p>
+                  <span class="text-muted small">
+                    <i class="fa-regular fa-clock"></i> Yesterday
+                  </span>
+                </div>
+              </li>
+              <li class="px-0 list-group-item d-flex">
+                <div class="flex-shrink-0">
+                  <figure class="avatar avatar-warning me-3">
+                    <span class="avatar-text fw-bold rounded-circle">
+                      <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    </span>
+                  </figure>
+                </div>
+                <div class="flex-grow-1">
+                  <p class="mb-0 fw-bold d-flex justify-content-between">
+                    Driver #1445D is not active.
+                  </p>
+                  <span class="text-muted small">
+                    <i class="fa-regular fa-clock"></i> Yesterday
+                  </span>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ./ notifications sidebar -->
+
+    <!-- ./ sidebars -->
+
+    
+    <!-- ./  menu -->
+
+    <!-- layout-wrapper -->
+    <div class="layout-wrapper">
+      <!-- header -->
+      <div class="header">
+        <div class="menu-toggle-btn">
+          <!-- Menu close button for mobile devices -->
+          <a href="#">
+            <i class="bi bi-list"></i>
+          </a>
+        </div>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img width="100" src="/assets/images/fleeets.png" alt="logo" />
+        </a>
+        <!-- ./ Logo -->
+        <div class="page-title">Checkout</div>
+        <form class="search-form">
+          <div class="input-group">
+            <button
+              class="btn btn-outline-light"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="bi bi-search"></i>
+            </button>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+            <a href="#" class="btn btn-outline-light close-header-search-bar">
+              <i class="bi bi-x"></i>
+            </a>
+          </div>
+        </form>
+        <div class="header-bar ms-auto">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link nav-link-notify"
+                data-count="2"
+                data-sidebar-target="#notifications"
+              >
+                <i class="bi bi-bell icon-lg"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link nav-link-notify"
+                data-count="3"
+                data-bs-toggle="dropdown"
+              >
+                <i class="bi bi-cart2 icon-lg"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
+                <h6 class="m-0 px-4 py-3 border-bottom">Shopping Cart</h6>
+                <div class="dropdown-menu-body">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex align-items-center">
+                      <a href="#" class="text-danger me-3" title="Remove">
+                        <i class="bi bi-trash"></i>
+                      </a>
+                      <a href="#" class="me-3 flex-shrink-0">
+                        <img
+                          src="../../assets/images/products/3.jpg"
+                          class="rounded"
+                          width="60"
+                          alt="..."
+                        />
+                      </a>
+                      <div>
+                        <h6>Digital clock</h6>
+                        <div>1 x $1.190,90</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex align-items-center">
+                      <a href="#" class="text-danger me-3" title="Remove">
+                        <i class="bi bi-trash"></i>
+                      </a>
+                      <a href="#" class="me-3 flex-shrink-0">
+                        <img
+                          src="../../assets/images/products/4.jpg"
+                          class="rounded"
+                          width="60"
+                          alt="..."
+                        />
+                      </a>
+                      <div>
+                        <h6>Toy Car</h6>
+                        <div>1 x $139.58</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex align-items-center">
+                      <a href="#" class="text-danger me-3" title="Remove">
+                        <i class="bi bi-trash"></i>
+                      </a>
+                      <a href="#" class="me-3 flex-shrink-0">
+                        <img
+                          src="../../assets/images/products/5.jpg"
+                          class="rounded"
+                          width="60"
+                          alt="..."
+                        />
+                      </a>
+                      <div>
+                        <h6>Sunglasses</h6>
+                        <div>2 x $50,90</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item d-flex align-items-center">
+                      <a href="#" class="text-danger me-3" title="Remove">
+                        <i class="bi bi-trash"></i>
+                      </a>
+                      <a href="#" class="me-3 flex-shrink-0">
+                        <img
+                          src="../../assets/images/products/6.jpg"
+                          class="rounded"
+                          width="60"
+                          alt="..."
+                        />
+                      </a>
+                      <div>
+                        <h6>Cake</h6>
+                        <div>1 x $10,50</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h6 class="m-0 px-4 py-3 border-top small">
+                  Sub Total : <strong class="text-primary">$1.442,78</strong>
+                </h6>
+              </div>
+            </li>
+            <li class="nav-item ms-3"></li>
+          </ul>
+        </div>
+        <!-- Header mobile buttons -->
+        <div class="header-mobile-buttons">
+          <a href="#" class="search-bar-btn">
+            <i class="bi bi-search"></i>
+          </a>
+          <a href="#" class="actions-btn">
+            <i class="bi bi-three-dots"></i>
+          </a>
+        </div>
+        <!-- ./ Header mobile buttons -->
+      </div>
+      <!-- ./ header -->
+
+      <!-- content -->
+      <div class="content">
+        <div class="mb-4">
+          <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#">
+                  <i class="bi bi-globe2 small me-2"></i> Dashboard
+                </a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Checkout
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8">
+            <div id="checkout-form-wizard">
+              <h3>Billing</h3>
+              <section class="card card-body mb-0">
+                <div class="mb-4">
+                  <h6 class="card-title mb-3">Billing</h6>
+                  <div class="text-muted">Enter your billing information</div>
+                </div>
+                <div class="row g-4 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Delivery Address</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="row g-4 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">State</label>
+                    <select id="billingState" class="form-select">
+                      <option selected="">Select</option>
+                      <option value="victoria">Victoria</option>
+                      <option value="alaska">Alaska</option>
+                      <option value="california">California</option>
+                      <option value="texas">Texas</option>
+                      <option value="queensland">Queensland</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="shippingAddressCheck"
+                  />
+                  <label class="form-check-label" for="shippingAddressCheck">
+                    Shipping Address is same as above
+                  </label>
+                </div>
+              </section>
+              <h3>Shipping</h3>
+              <section class="card card-body mb-0">
+                <div class="mb-4">
+                  <h6 class="card-title mb-3">Shipping</h6>
+                  <div class="text-muted">
+                    Choose where you want to recived your product.
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-6">
+                    <div class="card">
+                      <div class="card-body d-flex flex-column gap-3">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            checked
+                            id="flexRadioDefault1"
+                          />
+                          <label
+                            class="form-check-label mb-0"
+                            for="flexRadioDefault1"
+                            >Home</label
+                          >
+                        </div>
+                        <div>Josephin Villa</div>
+                        <div>81 Fulton Park, Brazil/Pedro Leopoldo</div>
+                        <div>
+                          <i class="bi bi-telephone me-2"></i> 408-963-7769
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card">
+                      <div class="card-body d-flex flex-column gap-3">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                          />
+                          <label
+                            class="form-check-label mb-0"
+                            for="flexRadioDefault2"
+                            >Workplace</label
+                          >
+                        </div>
+                        <div>Josephin Villa</div>
+                        <div>29543 South Plaza, Canada/Sydney Mines</div>
+                        <div>
+                          <i class="bi bi-telephone me-2"></i> 484-948-8535
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <a
+                    class="btn btn-outline-primary btn-icon"
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                  >
+                    <i class="bi bi-plus-circle"></i> Add New Address
+                  </a>
+                </p>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <h6 class="card-title mb-4">Add New Address</h6>
+                    <form>
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label class="form-label">First Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Last Name</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label class="form-label">Delivery Address</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Phone</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label class="form-label">City</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">State</label>
+                          <select id="billingState" class="form-select">
+                            <option selected="">Select</option>
+                            <option value="victoria">Victoria</option>
+                            <option value="alaska">Alaska</option>
+                            <option value="california">California</option>
+                            <option value="texas">Texas</option>
+                            <option value="queensland">Queensland</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary">Add</button>
+                    </form>
+                  </div>
+                </div>
+              </section>
+              <h3>Payment</h3>
+              <section class="card card-body mb-0">
+                <div class="mb-4">
+                  <h6 class="card-title mb-3">Payment</h6>
+                  <div class="text-muted">Choose your payment method.</div>
+                </div>
+                <div
+                  class="accordion accordion-with-radio"
+                  id="accordionExample"
+                >
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="true"
+                        aria-controls="collapseTwo"
+                      >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="paymentFlexRadioDefault"
+                            checked
+                            id="debitCardFlexRadioDefault"
+                          />
+                          <label
+                            class="form-check-label mb-0"
+                            for="debitCardFlexRadioDefault"
+                          >
+                            Credit / Debit Card
+                          </label>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse show collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <form>
+                          <div class="mb-3">
+                            <label class="form-label">Card Number</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="5555 5555 5555 5555"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Name on Card</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <div class="row mb-3">
+                            <div class="col-md-6">
+                              <label class="form-label">Expiry Date</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="MM/YY"
+                              />
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label">CVV Code</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="025"
+                              />
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="paymentFlexRadioDefault"
+                            id="paypalFlexRadioDefault"
+                          />
+                          <label
+                            class="form-check-label mb-0"
+                            for="paypalFlexRadioDefault"
+                          >
+                            Pay with Paypal
+                          </label>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex align-items-center">
+                          <img
+                            width="50"
+                            class="me-3"
+                            src="../../assets/images/paypal-logo.png"
+                            alt="..."
+                          />
+                          You will be redirected to PayPal website to complete
+                          your purchase securely.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="paymentFlexRadioDefault"
+                            id="cashOnDeliveryFlexRadioDefault"
+                          />
+                          <label
+                            class="form-check-label mb-0"
+                            for="cashOnDeliveryFlexRadioDefault"
+                          >
+                            Cash on Delivery
+                          </label>
+                        </div>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex align-items-center">
+                          <img
+                            width="50"
+                            class="me-3"
+                            src="../../assets/images/cash-on-delivery-logo.png"
+                            alt="..."
+                          />
+                          Pay with cash when your order is delivered.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-4">Order Summary</h5>
+            <div class="card mb-4">
+              <div class="card-body">
+                <h6 class="card-title mb-4">Products</h6>
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item d-flex px-0">
+                    <a href="#" class="me-3">
+                      <img
+                        src="../../assets/images/products/3.jpg"
+                        class="rounded"
+                        width="60"
+                        alt="..."
+                      />
+                    </a>
+                    <div>
+                      <h6>Digital clock</h6>
+                      <div>1 x $1.190,90</div>
+                    </div>
+                    <div class="text-end ms-auto">$1.190,90</div>
+                  </div>
+                </div>
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item d-flex px-0">
+                    <a href="#" class="me-3">
+                      <img
+                        src="../../assets/images/products/4.jpg"
+                        class="rounded"
+                        width="60"
+                        alt="..."
+                      />
+                    </a>
+                    <div>
+                      <h6>Toy Car</h6>
+                      <div>1 x $139.58</div>
+                    </div>
+                    <div class="text-end ms-auto">$139.58</div>
+                  </div>
+                </div>
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item d-flex px-0">
+                    <a href="#" class="me-3">
+                      <img
+                        src="../../assets/images/products/5.jpg"
+                        class="rounded"
+                        width="60"
+                        alt="..."
+                      />
+                    </a>
+                    <div>
+                      <h6>Sunglasses</h6>
+                      <div>2 x $50,90</div>
+                    </div>
+                    <div class="text-end ms-auto">$101,80</div>
+                  </div>
+                </div>
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item d-flex px-0">
+                    <a href="#" class="me-3">
+                      <img
+                        src="../../assets/images/products/6.jpg"
+                        class="rounded"
+                        width="60"
+                        alt="..."
+                      />
+                    </a>
+                    <div>
+                      <h6>Cake</h6>
+                      <div>1 x $10,50</div>
+                    </div>
+                    <div class="text-end ms-auto">$10,50</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <h6 class="card-title mb-4">Price</h6>
+                <div class="row justify-content-center mb-3">
+                  <div class="col-4 text-end">Sub Total :</div>
+                  <div class="col-4">$1.442,78</div>
+                </div>
+                <div class="row justify-content-center mb-3">
+                  <div class="col-4 text-end">Shipping :</div>
+                  <div class="col-4">Free</div>
+                </div>
+                <div class="row justify-content-center mb-3">
+                  <div class="col-4 text-end">Tax(18%) :</div>
+                  <div class="col-4">$259.70</div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-4 text-end">
+                    <strong>Total :</strong>
+                  </div>
+                  <div class="col-4">
+                    <strong>$1.702,48</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./ content -->
+
+      <!-- content-footer -->
+      <footer class="content-footer">
+        <div>
+          © 2021 Vetra -
+          <a href="https://laborasyon.com" target="_blank">Laborasyon</a>
+        </div>
+        <div>
+          <nav class="nav gap-4">
+            <a href="https://themeforest.net/licenses/standard" class="nav-link"
+              >Licenses</a
+            >
+            <a href="#" class="nav-link">Change Log</a>
+            <a href="#" class="nav-link">Get Help</a>
+          </nav>
+        </div>
+      </footer>
+      <!-- ./ content-footer -->
+    </div>
+    <!-- ./ layout-wrapper -->
+
+    <!-- Bundle scripts -->
+    <script src="/libs/bundle.js"></script>
+
+    <!-- Form wizard -->
+    <script src="/libs/form-wizard/jquery.steps.min.js"></script>
+
+    <!-- Examples -->
+    <script src="/dist/js/examples/checkout.js"></script>
+
+    <!-- Main Javascript file -->
+    <script src="/dist/js/app.min.js"></script>
+  </body>
+</html>
