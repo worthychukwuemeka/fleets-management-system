@@ -397,9 +397,7 @@ if (is_array($data_type)) {
           <a href="#" class="dropdown-item d-flex align-items-center">
             <i class="bi bi-person dropdown-item-icon"></i> Profile
           </a>
-          <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
-            <i class="bi bi-gear dropdown-item-icon"></i> Settings
-          </a>
+           
         </div>
       </div>
 

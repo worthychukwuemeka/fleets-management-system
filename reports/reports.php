@@ -207,7 +207,7 @@ if (is_array($data_type)) {
               </li>
             </ul>
           </div>
-           
+
         </div>
 
         <div class="tab-pane" id="alerts">
@@ -250,7 +250,7 @@ if (is_array($data_type)) {
 
             </ul>
           </div>
-           
+
         </div>
       </div>
     </div>
@@ -369,7 +369,7 @@ if (is_array($data_type)) {
       </a>
       <!-- ./ Logo -->
 
-      <div class="page-title">Vehicles</div>
+      <div class="page-title">Reports</div>
 
       <div class="header-bar ms-auto">
         <ul class="navbar-nav justify-content-end">
@@ -397,9 +397,7 @@ if (is_array($data_type)) {
           <a href="#" class="dropdown-item d-flex align-items-center">
             <i class="bi bi-person dropdown-item-icon"></i> Profile
           </a>
-          <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
-            <i class="bi bi-gear dropdown-item-icon"></i> Settings
-          </a>
+
         </div>
       </div>
 
@@ -412,98 +410,180 @@ if (is_array($data_type)) {
         <div class="search-box">
           <input type="text" id="searchInput" class="search-input" placeholder="Search...">
           <button onclick="search()" class="search-button"><i class="fas fa-search"></i></button>
+
+          <div class="dropdown ms-auto">
+            <a href="#" class="btn btn-primary" aria-haspopup="true" aria-expanded="false" style="margin-left: 485px;">
+              Generate Report</a>
+          </div>
         </div>
+
+
       </div>
 
-      <div class="card">
-    <div class="card-body">
-      <div class="d-md-flex gap-4 align-items-center">
-        <div class="d-none d-md-flex">Sort By</div>
-        <div class="d-md-flex gap-4 align-items-center">
-          <form class="mb-3 mb-md-0">
-            <div class="row g-3">
-              <div class="col-md-3">
-                <select id="statusFilter" class="form-select">
-                  <option value="all">All</option>
-                  <option value="active">Active</option>
-                  <option value="inactive">Inactive</option>
-                  <option value="outofserv">Out of Service</option>
-                </select>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="dropdown ms-auto">
-          <a href="#" class="btn btn-primary" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-plus"></i> Add New Vehicle</a>
-        </div>
-      </div>
+
+
+
     </div>
-  </div>
 
-  <div class="table-responsive">
-    <table class="table table-custom table-lg mb-0" id="Vehicles">
-      <thead>
-        <tr>
-          <th>Plate Number</th>
-          <th>Name</th>
-          <th>Make</th>
-          <th>Type</th>
-          <th>Status</th>
-          <th class="text-end">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-      <?php
-        $statusFilter = isset($_POST['status']) ? $_POST['status'] : 'all';
+    <div class="table-responsive">
+      <table class="table table-custom table-lg mb-0" id="Vehicles">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="#" style="color: #292D32;">
+              <i class="fa-solid fa-file"></i>
+                Document 1
+              </a>
+            </td>
+            <td>23/06</td>
+            <td>
+              <i style="display: flex;
+                  font-size: 25px;
+                  color: #BB0000;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 0px;
+                  gap: 5px;
+                  cursor: pointer;" class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
 
-        // Sample vehicle data
-        $vehicles = array(
-          array('LSD675RV', 'Toyota Corolla', 'Toyota', 'Car', 'Active'),
-          array('123CU5RV', 'Toyota Camry', 'Toyota', 'Car', 'Active'),
-          array('GHK236LI', 'Nissan Quest', 'Nissan', 'Van', 'Inactive'),
-          array('KUF128SG', 'Toyota Corolla', 'Toyota', 'Car', 'Inactive'),
-          array('MUK249DC', 'Toyota Corolla', 'Toyota', 'Car', 'Inactive')
-        );
+          <tr>
+            <td>
+              <a href="#" style="color: #292D32;">
+              <i class="fa-solid fa-file"></i>
+                Document 2
+              </a>
+            </td>
+            <td>23/06</td>
+            <td>
+              <i style="display: flex;
+                  font-size: 25px;
+                  color: #BB0000;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 0px;
+                  gap: 5px;
+                  cursor: pointer;" class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
 
-        // Filter the vehicles based on the selected status
-        if ($statusFilter != 'all') {
-          $filteredVehicles = array_filter($vehicles, function ($vehicle) use ($statusFilter) {
-            return $vehicle[4] == $statusFilter;
-          });
-        } else {
-          $filteredVehicles = $vehicles;
-        }
+          <tr>
+            <td>
+              <a href="#" style="color: #292D32;">
+              <i class="fa-solid fa-file"></i>
+                Document 3
+              </a>
+            </td>
+            <td>23/06</td>
+            <td>
+              <i style="display: flex;
+                  font-size: 25px;
+                  color: #BB0000;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 0px;
+                  gap: 5px;
+                  cursor: pointer;" class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
 
-        // Helper function to get the badge class based on status
-        function getStatusBadgeClass($status)
-        {
-          if ($status == 'Active') {
-            return 'bg-success';
-          } elseif ($status == 'Inactive') {
-            return 'bg-danger';
-          } elseif ($status == 'Out of Service') {
-            return 'bg-warning';
-          } else {
-            return 'bg-secondary';
-          }
-        }
+          <tr>
+            <td>
+              <a href="#" style="color: #292D32;">
+              <i class="fa-solid fa-file"></i>
+                Document 4
+              </a>
+            </td>
+            <td>23/06</td>
+            <td>
+              <i style="display: flex;
+                  font-size: 25px;
+                  color: #BB0000;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 0px;
+                  gap: 5px;
+                  cursor: pointer;" class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
 
-        // Generate the HTML table rows
-        foreach ($filteredVehicles as $vehicle) {
-          echo '<tr>';
-          echo '<td><a href="#">' . $vehicle[0] . '</a></td>';
-          echo '<td>' . $vehicle[1] . '</td>';
-          echo '<td>' . $vehicle[2] . '</td>';
-          echo '<td>' . $vehicle[3] . '</td>';
-          echo '<td><span class="badge ' . getStatusBadgeClass($vehicle[4]) . '">' . $vehicle[4] . '</span></td>';
-          echo '<td><span><i style="display: flex; font-size: 25px; color: #00BB90; flex-direction: row; justify-content: flex-end; align-items: center; padding: 0px; gap: 15px; cursor: pointer;" class="fa-solid fa-pen-to-square"></i></span></td>';
-          echo '<td><i id="deleteButton" style="display: flex; font-size: 25px; color: #BB0000; flex-direction: row; justify-content: flex-start; align-items: center; padding: 0px; gap: 5px; cursor: pointer;" class="fa-solid fa-trash-can"></i></td>';
-          echo '</tr>';
-        }
-        ?>
-      </tbody>
-    </table>
-  </div>
+          <tr>
+            <td>
+              <a href="#" style="color: #292D32;">
+              <i class="fa-solid fa-file"></i>
+                Document 5
+              </a>
+            </td>
+            <td>23/06</td>
+            <td>
+              <i style="display: flex;
+                  font-size: 25px;
+                  color: #BB0000;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 0px;
+                  gap: 5px;
+                  cursor: pointer;" class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#" style="color: #292D32;">
+              <i class="fa-solid fa-file"></i>
+                Document 6
+              </a>
+            </td>
+            <td>23/06</td>
+            <td>
+              <i style="display: flex;
+                  font-size: 25px;
+                  color: #BB0000;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 0px;
+                  gap: 5px;
+                  cursor: pointer;" class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#" style="color: #292D32;">
+              <i class="fa-solid fa-file"></i>
+                Document 7
+              </a>
+            </td>
+            <td>23/06</td>
+            <td>
+              <i style="display: flex;
+                  font-size: 25px;
+                  color: #BB0000;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  padding: 0px;
+                  gap: 5px;
+                  cursor: pointer;" class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <!-- ./ content -->
 
     <!-- content-footer -->
@@ -523,21 +603,6 @@ if (is_array($data_type)) {
   </div>
   <!-- ./ layout-wrapper -->
 
-  <!--Delete button function-->
-  <script>
-    // Select the delete button element
-    var deleteButton = document.getElementById('deleteButton');
-
-    // Attach an event listener to the delete button
-    deleteButton.addEventListener('click', deleteFunction);
-
-    // Define the delete function
-    function deleteFunction() {
-      // Display an alert message when the delete button is clicked
-      alert('Delete button clicked!');
-    }
-  </script>
-
   <!-- Bundle scripts -->
   <script src="../libs/bundle.js"></script>
 
@@ -552,26 +617,6 @@ if (is_array($data_type)) {
 
   <!--JQuery link-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <script>
-    // Add event listener for status filter change
-    document.getElementById('statusFilter').addEventListener('change', function() {
-      // Get the selected status value
-      var status = this.value;
-
-      // Send an AJAX request to the server to filter vehicles
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          // Update the table body with the filtered data
-          document.querySelector('#Vehicles tbody').innerHTML = xhr.responseText;
-        }
-      };
-      xhr.open('POST', 'vehicle-filter.php', true);
-      xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-      xhr.send('status=' + status);
-    });
-  </script>
 
 </body>
 
