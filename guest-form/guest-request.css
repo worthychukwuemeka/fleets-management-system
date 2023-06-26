@@ -5,9 +5,12 @@
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   color: #2c2c2c;
+  align-items: center;
+  justify-content: center;
+  margin-top: 110px;
 }
 body a {
   color: inherit;
