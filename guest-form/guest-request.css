@@ -1,198 +1,202 @@
-/*basic reset*/
 * {
   margin: 0;
   padding: 0;
-}
-
-html {
-
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
-  background: transparent;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/*form styles*/
-#msform {
-  text-align: center;
-  position: relative;
-  margin-top: 30px;
-}
-
-#msform fieldset {
-  background: white;
-  border: 0 none;
-  border-radius: 0px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 20px 30px;
-  box-sizing: border-box;
-  width: 80%;
-  margin: 0 10%;
-
-  /*stacking fieldsets above each other*/
-  position: relative;
-}
-
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-  display: none;
-}
-
-/*inputs*/
-#msform input, #msform textarea {
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 0px;
-  margin-bottom: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-family: montserrat;
-  color: #2C3E50;
-  font-size: 13px;
-}
-
-#msform input:focus, #msform textarea:focus {
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  border: 1px solid #ee0979;
-  outline-width: 0;
-  transition: All 0.5s ease-in;
-  -webkit-transition: All 0.5s ease-in;
-  -moz-transition: All 0.5s ease-in;
-  -o-transition: All 0.5s ease-in;
-}
-
-/*buttons*/
-#msform .action-button {
-  width: 100px;
-  background: #470A34;
-  font-weight: bold;
-  color: #470A34;
-  border: 0 none;
-  border-radius: 25px;
+.header__btn {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #fff;
+  border: 1px solid #2c2c2c;
+  border-radius: 3px;
   cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
+  outline: none;
 }
-
-#msform .action-button:hover, #msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #470A34;
+.header__btn:last-child {
+  margin-right: 0;
 }
-
-#msform .action-button-previous {
-  width: 100px;
-  background: #C5C5F1;
-  font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 25px;
-  cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
-}
-
-#msform .action-button-previous:hover, #msform .action-button-previous:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
-}
-
-/*headings*/
-.fs-title {
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #470A34;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-.fs-subtitle {
-  font-weight: normal;
-  font-size: 13px;
-  color: #470A34;
-  margin-bottom: 20px;
-}
-
-/*progressbar*/
-#progressbar {
-  margin-bottom: 30px;
-  overflow: hidden;
-  /*CSS counters to number the steps*/
-  counter-reset: step;
-}
-
-#progressbar::before {
-  background: #00BB90;
-}
-
-#progressbar li {
-  list-style-type: none;
-  color: #6B6B6B;
-  text-transform: uppercase;
-  font-size: 9px;
-  width: 33.33%;
-  float: left;
-  position: relative;
-  letter-spacing: 1px;
-}
-
-#progressbar li:before {
-  content: counter(step);
-  counter-increment: step;
-  width: 24px;
-  height: 24px;
-  line-height: 26px;
-  display: block;
-  font-size: 12px;
+.header__btn:hover, .header__btn.js-active {
   color: #fff;
-  background: #6B6B6B;
-  border-radius: 25px;
-  margin: 0 auto 10px auto;
+  background-color: #2c2c2c;
 }
 
-/*progressbar connectors*/
-#progressbar li:after {
+.header {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.header__title {
+  margin-bottom: 30px;
+  font-size: 2.1rem;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto 50px;
+}
+
+.content__title {
+  margin-bottom: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.content__title--m-sm {
+  margin-bottom: 10px;
+}
+
+.multisteps-form__progress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.multisteps-form__progress-btn {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  position: relative;
+  padding-top: 20px;
+  color: rgba(108, 117, 125, 0.7);
+  text-indent: -9999px;
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  cursor: pointer;
+}
+@media (min-width: 500px) {
+  .multisteps-form__progress-btn {
+    text-indent: 0;
+  }
+}
+.multisteps-form__progress-btn:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 13px;
+  height: 13px;
   content: '';
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+  transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+  transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.multisteps-form__progress-btn:after {
+  position: absolute;
+  top: 5px;
+  left: calc(-50% - 13px / 2);
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  display: block;
   width: 100%;
   height: 2px;
-  background: #6B6B6B;
+  content: '';
+  background-color: currentColor;
+  z-index: 1;
+}
+.multisteps-form__progress-btn:first-child:after {
+  display: none;
+}
+.multisteps-form__progress-btn.js-active {
+  color: #007bff;
+}
+.multisteps-form__progress-btn.js-active:before {
+  -webkit-transform: translateX(-50%) scale(1.2);
+          transform: translateX(-50%) scale(1.2);
+  background-color: currentColor;
+}
+
+.multisteps-form__form {
+  position: relative;
+}
+
+.multisteps-form__panel {
   position: absolute;
-  left: -50%;
-  top: 9px;
-  z-index: -1; /*put it behind the numbers*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
 }
-
-#progressbar li:first-child:after {
-  /*connector not needed before the first step*/
-  content: none;
+.multisteps-form__panel.js-active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
 }
-
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-#progressbar li.active:before, #progressbar li.active:after {
-  background: #470A34;
-  color: white;
+.multisteps-form__panel[data-animation="scaleOut"] {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
-
-
-/* Not relevant to this form */
-.dme_link {
-  margin-top: 30px;
-  text-align: center;
+.multisteps-form__panel[data-animation="scaleOut"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
-.dme_link a {
-  background: #FFF;
-  font-weight: bold;
-  color: #470A34;
-  border: 0 none;
-  border-radius: 25px;
-  cursor: pointer;
-  padding: 5px 25px;
-  font-size: 12px;
+.multisteps-form__panel[data-animation="slideHorz"] {
+  left: 50px;
 }
-
-.dme_link a:hover, .dme_link a:focus {
-  background: #C5C5F1;
-  text-decoration: none;
+.multisteps-form__panel[data-animation="slideHorz"].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  left: 0;
+}
+.multisteps-form__panel[data-animation="slideVert"] {
+  top: 30px;
+}
+.multisteps-form__panel[data-animation="slideVert"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+.multisteps-form__panel[data-animation="fadeIn"].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+.multisteps-form__panel[data-animation="scaleIn"] {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.multisteps-form__panel[data-animation="scaleIn"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
