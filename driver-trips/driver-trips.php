@@ -12,8 +12,6 @@ if (is_array($data_type)) {
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +19,7 @@ if (is_array($data_type)) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Fleet Management System | Dashboard - Driver</title>
+  <title>Fleet Management System | Driver - Maintenance (History)</title>
 
 
   <!-- Google fonts -->
@@ -30,21 +28,50 @@ if (is_array($data_type)) {
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap icons -->
-  <link rel="stylesheet" href="./dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
+  <link rel="stylesheet" href="../vehicles/dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
   <!-- Bootstrap Docs -->
-  <link rel="stylesheet" href="./dist/css/bootstrap-docs.css" type="text/css" />
+  <link rel="stylesheet" href="../dist/css/bootstrap-docs.css" type="text/css" />
 
   <!-- Slick -->
-  <link rel="stylesheet" href="./libs/slick/slick.css" type="text/css" />
+  <link rel="stylesheet" href="../libs/slick/slick.css" type="text/css" />
 
   <!-- Main style file -->
-  <link rel="stylesheet" href="./dist/css/app.min.css" type="text/css" />
+  <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css" />
 
   <!--Hidden bootstrap style elements (Hid it because it is creating a pop up on the webpage that is not neccessary)-->
   <style>
     .item-action-buttons {
       display: none;
       visibility: hidden;
+    }
+
+    .search-form {
+      display: inline-block;
+      border-radius: 20px;
+      padding: 10px;
+      background-color: #f1f1f1;
+    }
+
+    .search-input {
+      width: 200px;
+      height: 40px;
+      border: none;
+      padding: 8px;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .search-button {
+      width: 80px;
+      background-color: #470A34;
+      color: #fff;
+      border: none;
+      border-radius: 0 20px 20px 0;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .search-button:hover {
+      background-color: #845C78;
     }
   </style>
 
@@ -53,7 +80,7 @@ if (is_array($data_type)) {
 <body>
   <!-- preloader -->
   <div class="preloader">
-    <img src="./assets/images/fleeets.png" alt="logo" />
+    <img src="../assets/images/fleeets.png" alt="logo" />
     <div class="preloader-icon"></div>
   </div>
   <!-- ./ preloader -->
@@ -213,7 +240,7 @@ if (is_array($data_type)) {
                 </div>
                 <div class="flex-grow-1">
                   <p class="mb-0 fw-bold d-flex justify-content-between">
-                    Driver #6666 is not active.
+                    Driver #1445D is not active.
                   </p>
                   <span class="text-muted small">
                     <i class="fa-regular fa-clock"></i> Yesterday
@@ -236,7 +263,7 @@ if (is_array($data_type)) {
   <div class="menu">
     <div class="menu-header">
       <a href="/index.php" class="menu-header-logo">
-        <img src="./assets/images/fleeets.png" alt="logo" />
+        <img src="../assets/images/fleeets.png" alt="logo" />
       </a>
       <a href="/index.php" class="btn btn-sm menu-close-btn">
         <i class="bi bi-x"></i>
@@ -246,7 +273,7 @@ if (is_array($data_type)) {
 
       <ul id="navLinks">
         <li>
-          <a class="active" href="/driver-dashboard/driver-dashboard.php">
+          <a href="/driver-dashboard/driver-dashboard.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-gauge"></i>
             </span>
@@ -262,12 +289,12 @@ if (is_array($data_type)) {
           </a>
           <ul>
             <li>
-              <a href="../maintenance//maintenance-history.php">View History</a>
+              <a style="color: #470A34;" href="/driver-maintenance/driver-maintenance.php">View History</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="/driver-trips/driver-trips.php">
+          <a class="active" href="/driver-trips/driver-trips.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-car-side"></i>
             </span>
@@ -308,10 +335,12 @@ if (is_array($data_type)) {
       </div>
 
       <!-- Logo -->
-      <a href="./fleet-manager-dashboard.php" class="logo">
-        <img width="100" src="./assets/images/fleeets.png" alt="logo" />
+      <a href="/index.php" class="logo">
+        <img width="100" src="../assets/fleeets.png" alt="logo" />
       </a>
       <!-- ./ Logo -->
+
+      <div class="page-title">Vehicles</div>
 
       <div class="header-bar ms-auto">
         <ul class="navbar-nav justify-content-end">
@@ -327,8 +356,8 @@ if (is_array($data_type)) {
       <div class="dropdown">
         <a style="text-align: right;" href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
           <div style="margin-right: 20px;">
-            <div class="fw-bold" style="color: #222222;"><?php echo $user_data['name'] ?></div>
-            <small class="text-muted"><?php echo $user_data['role'] ?></small>
+            <div class="fw-bold" style="color: #222222;"><?php echo $user_data["name"] ?></div>
+            <small class="text-muted"><?php echo $user_data["role"] ?></small>
           </div>
 
           <div class="avatar me-3">
@@ -340,130 +369,146 @@ if (is_array($data_type)) {
             <i class="bi bi-person dropdown-item-icon"></i> Profile
           </a>
 
-          <a href="/index.php" class="dropdown-item d-flex align-items-center text-danger" target="_blank">
-            <i class="bi bi-box-arrow-right dropdown-item-icon"></i> Logout
-          </a>
         </div>
       </div>
 
     </div>
     <!-- ./ header -->
-    <div class="d-flex justify-content-between align-items-center">
-      <h2 class="mb-0">Vehicle</h2>
-    </div>
+
     <!-- content -->
     <div class="content">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
 
-
-        <div class="card-body d-flex flex-wrap" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); grid-gap: 10px;">
-          <div style="grid-row: 1 / span 1; grid-column: 1 / span 2;">
-            <img src="../driver-dashboard/car.png" style="width: 144px; height: 144px; border-radius: 50%;">
-          </div>
-
-          <div class="container-1">
-            <div style="grid-row: 1 / span 1; grid-column: 3 / span 1; margin-bottom:30px; margin-left: 15px;">
-              <div style="color: #6B6B6B; font-weight: 700;">Vehicle Name <br>
-                <span style="color: #222222;">Toyota Corolla</span>
-              </div>
-            </div>
-            <div style="grid-row: 2 / span 1; grid-column: 2 / span 1; margin-bottom:30px; margin-left: 15px;">
-              <div style="color: #6B6B6B; font-weight: 700;">Plate Number <br>
-                <span style="color: #222222;">LSD675RV</span>
-              </div>
-            </div>
-            <div style="grid-row: 3 / span 1; grid-column: 1 / span 1; margin-bottom:30px; margin-left: 15px;">
-              <div style="color: #6B6B6B; font-weight: 700;">Trips<br>
-                <span style="color: #222222;">20</span>
-              </div>
-            </div>
-
-          </div>
-          <div class="container-2" style="margin-left: 160px;">
-            <div style="grid-row: 2 / span 1; grid-column: 1 / span 1; margin-bottom:30px;">
-              <div style="color: #6B6B6B; font-weight: 700;">Vehicle ID <br>
-                <span style="color: #222222;">123CUF</span>
-              </div>
-            </div>
-            <div style="grid-row: 2 / span 1; grid-column: 3 / span 1; margin-bottom:30px;">
-              <div style="color: #6B6B6B; font-weight: 700;">Status<br>
-                <span style="color: #222222;">Active</span>
-              </div>
-            </div>
-
-            <div style="grid-row: 3 / span 1; grid-column: 2 / span 1; margin-bottom:30px;">
-              <div style="color: #6B6B6B; font-weight: 700;">Est. Mileage<br>
-                <span style="color: #222222;">20,881 miles</span>
-              </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="d-md-flex gap-4 align-items-center">
+            <h4>Trips</h4>
+            <div class="dropdown ms-auto">
+              <a href="#" class="btn btn-primary" aria-haspopup="true" aria-expanded="false">Add New Trip</a>
             </div>
           </div>
-
         </div>
       </div>
+
+      <div class="table-responsive">
+        <table class="table table-custom table-lg mb-0" id="Vehicles">
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>To</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+              
+              <td>Senate Building</td>
+              <td>University Chapel</td>
+              <td>
+                23/06/2023
+              </td>
+              <td>
+                <span class="badge bg-purple">Ongoing</span>
+              </td>
+             
+            </tr>
+
+            <tr>
+              
+              <td>Esther Hall</td>
+              <td>University Chapel</td>
+              <td>
+                23/06/2023
+              </td>
+              <td>
+                <span class="badge bg-success">Completed</span>
+              </td>
+             
+            </tr>
+
+            <tr>
+              
+              <td>CST</td>
+              <td>Dorcas Hall</td>
+              <td>
+                23/06/2023
+              </td>
+              <td>
+                <span class="badge bg-success">Completed</span>
+              </td>
+             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- ./ content -->
+
+      <!-- content-footer -->
+      <footer class="content-footer">
+        <div>
+          © 2023 Ohue Bernice
+        </div>
+        <div>
+          <nav class="nav gap-4">
+            <a href="#" class="nav-link">Licenses</a>
+            <a href="#" class="nav-link">Change Log</a>
+            <a href="#" class="nav-link">Get Help</a>
+          </nav>
+        </div>
+      </footer>
+      <!-- ./ content-footer -->
     </div>
-    <!-- ./ content -->
+    <!-- ./ layout-wrapper -->
 
-    <!-- content-footer -->
-    <footer class="content-footer">
-      <div>
-        © 2023 Ohue Bernice
-      </div>
-      <div>
-        <nav class="nav gap-4">
-          <a href="#" class="nav-link">Licenses</a>
-          <a href="#" class="nav-link">Change Log</a>
-          <a href="#" class="nav-link">Get Help</a>
-        </nav>
-      </div>
-    </footer>
-    <!-- ./ content-footer -->
-  </div>
-  <!-- ./ layout-wrapper -->
+    <!--Delete button function-->
+    <script>
+      // Select the delete button element
+      var deleteButton = document.getElementById('deleteButton');
 
-  <script>
-    window.Promise ||
-      document.write(
-        '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
-      )
-    window.Promise ||
-      document.write(
-        '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
-      )
-    window.Promise ||
-      document.write(
-        '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
-      )
-  </script>
+      // Attach an event listener to the delete button
+      deleteButton.addEventListener('click', deleteFunction);
 
-  <script>
-    // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
-    // Based on https://gist.github.com/blixt/f17b47c62508be59987b
-    var _seed = 42;
-    Math.random = function() {
-      _seed = _seed * 16807 % 2147483647;
-      return (_seed - 1) / 2147483646;
-    };
-  </script>
+      // Define the delete function
+      function deleteFunction() {
+        // Display an alert message when the delete button is clicked
+        alert('Delete button clicked!');
+      }
+    </script>
 
-  <!-- Bundle scripts -->
-  <script src="./libs/bundle.js"></script>
+    <!-- Bundle scripts -->
+    <script src="../libs/bundle.js"></script>
 
-  <!-- Apex chart -->
-  <script src="./libs/charts/apex/apexcharts.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script src="libs/charts/apex/apexcharts.min.js"></script>
+    <!-- Examples -->
+    <script src="../dist/js/examples/orders.js"></script>
 
-  <!-- Slick -->
-  <script src="./libs/slick/slick.min.js"></script>
+    <!-- Main Javascript file -->
+    <script src="../dist/js/app.min.js"></script>
 
-  <!-- Examples -->
-  <script src="./dist/js/examples/dashboard.js"></script>
+    <!--Font awesome link-->
+    <script src="https://kit.fontawesome.com/08d9b1877f.js" crossorigin="anonymous"></script>
 
-  <!-- Main Javascript file -->
-  <script src="./dist/js/app.min.js"></script>
+    <!--JQuery link-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!--Font awesome link-->
-  <script src="https://kit.fontawesome.com/08d9b1877f.js" crossorigin="anonymous"></script>
+    <script>
+      // Add event listener for status filter change
+      document.getElementById('statusFilter').addEventListener('change', function() {
+        // Get the selected status value
+        var status = this.value;
+
+        // Send an AJAX request to the server to filter vehicles
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // Update the table body with the filtered data
+            document.querySelector('#Vehicles tbody').innerHTML = xhr.responseText;
+          }
+        };
+        xhr.open('POST', 'vehicle-filter.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send('status=' + status);
+      });
+    </script>
 
 </body>
 
