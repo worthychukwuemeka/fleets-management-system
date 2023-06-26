@@ -513,7 +513,7 @@ font-weight: 400;">Rejected Requests</span></h1>
           <thead>
 
           </thead>
-          <tbody>
+          <tbody id="requestTableBody">
             <tr id="rowToBeRemoved">
               <td style="display: grid; align-items: center;">
                 <figure class="avatar me-3">
