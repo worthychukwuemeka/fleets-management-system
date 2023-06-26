@@ -23,3 +23,7 @@ function redirectToDashboard() {
     window.location.href = "/ber_project/driver-dashboard.php";
   }
 }
+
+function redirectToGuestPage() {
+  window.location.href = "./guest-form.html";
+}

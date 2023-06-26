@@ -39,7 +39,7 @@
     </div>
     <a href="#" class="forgot-password">Forgot Password?</a>
     <a class="btn" style="text-decoration: none;" onclick="redirectToDashboard()" role="button">Login</a>
-    <a class="btn" style="text-decoration: none; background: transparent; border: 2px solid #470A34; color:#470A34;" onclick="continueAsGuest()" role="button">Continue as Guest</a>
+    <a class="btn" style="text-decoration: none; background: transparent; border: 2px solid #470A34; color:#470A34;" onclick="redirectToGuestPage()" role="button">Continue as Guest</a>
   </form>
 </div>
 
