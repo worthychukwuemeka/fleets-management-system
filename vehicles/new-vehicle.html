@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Registration Form</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      max-width: 50%;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    
+    .container h2 {
+      grid-column: span 2;
+      text-align: center;
+    }
+    
+    .container label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .container input,
+    .container select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .container .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Car Registration Form</h2>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div>
+      <label for="make">Make:</label>
+      <input type="text" id="make" required>
+    </div>
+    <div>
+      <label for="plate">Plate Number:</label>
+      <input type="text" id="plate" required>
+    </div>
+    <div>
+      <label for="model">Model:</label>
+      <input type="text" id="model" required>
+    </div>
+    <div>
+      <label for="type">Type:</label>
+      <input type="text" id="type" required>
+    </div>
+    <div>
+      <label for="status">Status:</label>
+      <select id="status" required>
+        <option value="">Select Status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="out_of_service">Out of Service</option>
+      </select>
+    </div>
+    <div>
+      <label for="mileage">Estimated Mileage:</label>
+      <input type="text" id="mileage" required>
+    </div>
+    <div>
+      <button type="submit" class="btn">Register Car</button>
+    </div>
+  </div>
+
+  <!-- Add JavaScript code if needed -->
+
+</body>
+</html>

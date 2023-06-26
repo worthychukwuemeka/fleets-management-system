@@ -432,7 +432,7 @@ if (is_array($data_type)) {
           </form>
         </div>
         <div class="dropdown ms-auto">
-          <a href="#" class="btn btn-primary" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-plus"></i> Add New Vehicle</a>
+          <a href="./new-vehicle.html" class="btn btn-primary" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-plus"></i> Add New Vehicle</a>
         </div>
       </div>
     </div>
