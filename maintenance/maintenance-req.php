@@ -25,9 +25,7 @@ if (is_array($data_type)) {
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap icons -->
   <link rel="stylesheet" href="../dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
@@ -209,7 +207,7 @@ if (is_array($data_type)) {
               </li>
             </ul>
           </div>
-           
+
         </div>
 
         <div class="tab-pane" id="alerts">
@@ -252,7 +250,7 @@ if (is_array($data_type)) {
 
             </ul>
           </div>
-           
+
         </div>
       </div>
     </div>
@@ -447,8 +445,8 @@ if (is_array($data_type)) {
               font-size: 14px;
               font-weight: 400;">Total Requests</span></h1>
 
-<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
-<h1 style="display: flex;
+              <img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
+              <h1 style="display: flex;
 width: 94.875px;
 height: 23.918px;
 flex-direction: column;
@@ -466,8 +464,8 @@ color: #6B6B6B;
 font-size: 14px;
 font-weight: 400;">Opened Requests</span></h1>
 
-<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
-<h1 style="display: flex;
+              <img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
+              <h1 style="display: flex;
 width: 94.875px;
 height: 23.918px;
 flex-direction: column;
@@ -485,8 +483,8 @@ color: #6B6B6B;
 font-size: 14px;
 font-weight: 400;">Approved Requests</span></h1>
 
-<img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
-<h1 style="display: flex;
+              <img src="../maintenance/assets/images/wrench.svg" alt="" style="margin-left: 90px;">
+              <h1 style="display: flex;
 width: 94.875px;
 height: 23.918px;
 flex-direction: column;
@@ -506,44 +504,43 @@ font-weight: 400;">Rejected Requests</span></h1>
             </div>
           </div>
 
-          
+
         </div>
       </div>
 
       <div class="table-responsive">
         <table id="drivers" class="table table-custom table-lg">
           <thead>
-            
+
           </thead>
           <tbody>
-          <tr id="rowToBeRemoved">
-      <td style="display: grid; align-items: center;">
-        <figure class="avatar me-3">
-          <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;" alt="avatar" />
-        </figure>
-        <h1 style="display: flex; width: 94.875px; height: 23.918px; flex-direction: column; flex-shrink: 0; color: #222; font-size: 20px; font-weight: 500; margin-left: 56px; margin-bottom: 56px;">
-          Brake Light
-          <span style="display: flex; width: 137px; height: 17px; flex-direction: column; flex-shrink: 0; color: #6B6B6B; font-size: 14px; font-weight: 400;">123CUF Toyota Corolla</span>
-        </h1>
-        <p style="margin-bottom: 15px; line-height: 150%;">Description: Driver side brake light is out</p>
-      </td>
-      <td style="color: #222; font-size: 16px; line-height: 142.023%; gap: -16px;">
-        Reported 2 days ago by Ayotunde Babalola
-      </td>
-      <td>
-        <button type="button" style="display: flex; width: 111px; padding: 12px 39px; justify-content: center; align-items: center; gap: 8px; background-color: #470a34; border-color: #470a34;" class="btn btn-secondary" onclick="approveRequest()">Approve</button>
-      </td>
-      <td>
-        <button type="button" style="background-color: #470a34; border-color: #470a34;" class="btn btn-secondary" onclick="rejectRequest()">Reject</button>
-      </td>
-    </tr>
+            <tr id="rowToBeRemoved">
+              <td style="display: grid; align-items: center;">
+                <figure class="avatar me-3">
+                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;" alt="avatar" />
+                </figure>
+                <h1 style="display: flex; width: 94.875px; height: 23.918px; flex-direction: column; flex-shrink: 0; color: #222; font-size: 20px; font-weight: 500; margin-left: 56px; margin-bottom: 56px;">
+                  Brake Light
+                  <span style="display: flex; width: 137px; height: 17px; flex-direction: column; flex-shrink: 0; color: #6B6B6B; font-size: 14px; font-weight: 400;">123CUF Toyota Corolla</span>
+                </h1>
+                <p style="margin-bottom: 15px; line-height: 150%;">Description: Driver side brake light is out</p>
+              </td>
+              <td style="color: #222; font-size: 16px; line-height: 142.023%; gap: -16px;">
+                Reported 2 days ago by Ayotunde Babalola
+              </td>
+              <td>
+                <button type="button" style="display: flex; width: 111px; padding: 12px 39px; justify-content: center; align-items: center; gap: 8px; background-color: #470a34; border-color: #470a34;" class="btn btn-secondary" onclick="approveRequest()">Approve</button>
+              </td>
+              <td>
+                <button type="button" style="background-color: #470a34; border-color: #470a34;" class="btn btn-secondary" onclick="rejectRequest()">Reject</button>
+              </td>
+            </tr>
 
             <tr>
               <td style="display: grid;
               align-items: center;">
                 <figure class="avatar me-3">
-                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
-                    alt="avatar" />
+                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;" alt="avatar" />
                 </figure>
                 <h1 style="display: flex;
               width: 94.875px;
@@ -571,7 +568,7 @@ font-weight: 400;">Rejected Requests</span></h1>
               gap: -16px;">
                 Reported 2 days ago by Ayotunde Babalola
               </td>
-              
+
               <td>
                 <button type="button" style="
                 display: flex;
@@ -581,8 +578,7 @@ justify-content: center;
 align-items: center;
 gap: 8px;
 background-color: #470a34;
-border-color: #470a34;" 
-                class="btn btn-secondary" onclick="approveRequest()">Approve</button>
+border-color: #470a34;" class="btn btn-secondary" onclick="approveRequest()">Approve</button>
               </td>
               <td>
                 <button type="button" style="background-color: #470a34;
@@ -594,8 +590,7 @@ border-color: #470a34;" class="btn btn-secondary" onclick="rejectRequest()" oncl
               <td style="display: grid;
               align-items: center;">
                 <figure class="avatar me-3">
-                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;"
-                    alt="avatar" />
+                  <img src="../maintenance/assets/images/info-circle.svg" class="rounded-circle" style="margin-top: 65px;" alt="avatar" />
                 </figure>
                 <h1 style="display: flex;
               width: 94.875px;
@@ -623,7 +618,7 @@ border-color: #470a34;" class="btn btn-secondary" onclick="rejectRequest()" oncl
               gap: -16px;">
                 Reported 2 days ago by Ayotunde Babalola
               </td>
-              
+
               <td>
                 <button type="button" style="
                 display: flex;
@@ -632,8 +627,7 @@ padding: 12px 39px;
 justify-content: center;
 align-items: center;
 gap: 8px; background-color: #470a34;
-border-color: #470a34;" 
-                class="btn btn-secondary" onclick="approveRequest()">Approve</button>
+border-color: #470a34;" class="btn btn-secondary" onclick="approveRequest()">Approve</button>
               </td>
               <td>
                 <button type="button" style="background-color: #470a34;
@@ -645,7 +639,7 @@ border-color: #470a34;" class="btn btn-secondary" onclick="rejectRequest()">Reje
         </table>
       </div>
 
-     
+
     </div>
     <!-- ./ content -->
 
@@ -679,58 +673,61 @@ border-color: #470a34;" class="btn btn-secondary" onclick="rejectRequest()">Reje
   <script src="https://kit.fontawesome.com/08d9b1877f.js" crossorigin="anonymous"></script>
 
   <!-- Include jQuery library -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Include jQuery library -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-<!-- Include jQuery library -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-  function approveRequest() {
-    // Display alert message
-    alert("Request Approved!");
-  }
-  function removeItem() {
-    // Remove the row from the table
-    $(this).closest("tr").remove();
-  }
+  <script>
+    function approveRequest() {
+      // Display alert message
+      alert("Request Approved!");
+    }
 
-  function rejectRequest() {
-    // Display alert message
-    alert("Request Rejected!");
+    function removeItem() {
+      // Remove the row from the table
+      $(this).closest("tr").remove();
+    }
 
-    // Get a reference to the table body
-    var tableBody = document.getElementById("requestTableBody");
+    function rejectRequest() {
+      // Display alert message
+      alert("Request Rejected!");
 
-    // Find the row to be removed
-    var rowToRemove = document.getElementById("rowToBeRemoved");
+      // Get a reference to the table body
+      var tableBody = document.getElementById("requestTableBody");
 
-    // Remove the row from the table
-    tableBody.removeChild(rowToRemove);
+      // Find the row to be removed
+      var rowToRemove = document.getElementById("rowToBeRemoved");
 
-    // Send AJAX request to the server
-    $.ajax({
-      url: "process.php", // Replace with the actual PHP script URL
-      method: "POST",
-      data: { action: "reject" }, // Include any necessary data for processing
-      success: function(response) {
-        // Process the server response
-        if (response === "success") {
-          console.log("Request rejected successfully!");
-        } else {
-          console.log("An error occurred while rejecting the request.");
+      // Remove the row from the table
+      tableBody.removeChild(rowToRemove);
+
+      // Send AJAX request to the server
+      $.ajax({
+        url: "process.php", // Replace with the actual PHP script URL
+        method: "POST",
+        data: {
+          action: "reject"
+        }, // Include any necessary data for processing
+        success: function(response) {
+          // Process the server response
+          if (response === "success") {
+            console.log("Request rejected successfully!");
+          } else {
+            console.log("An error occurred while rejecting the request.");
+          }
+        },
+        error: function(xhr, status, error) {
+          // Handle any errors
+          console.log(error);
         }
-      },
-      error: function(xhr, status, error) {
-        // Handle any errors
-        console.log(error);
-      }
-    });
-  }
-</script>
+      });
+    }
+  </script>
 
 
 </body>
