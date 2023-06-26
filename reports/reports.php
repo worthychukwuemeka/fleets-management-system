@@ -282,7 +282,7 @@ if (is_array($data_type)) {
         </li>
 
         <li>
-          <a class="active" href="../vehicles/vehicles.php">
+          <a href="../vehicles/vehicles.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-car"></i>
             </span>
@@ -310,7 +310,7 @@ if (is_array($data_type)) {
               <a href="../maintenance/maintenance-req.html">View Requests</a>
             </li>
             <li>
-              <a href="../maintenance//maintenance-history.php">View History</a>
+              <a href=".../maintenance/maintenance-history.php">View History</a>
             </li>
           </ul>
         </li>
@@ -326,12 +326,12 @@ if (is_array($data_type)) {
               <a href="../maintenance/maintenance-req.html">View Requests</a>
             </li>
             <li>
-              <a href="../maintenance/maintenance-history.php">View History</a>
+              <a href="./maintenance/maintenance-history.php">View History</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="../reports/reports.php">
+          <a class="active" href="../reports/reports.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-file-invoice"></i>
             </span>
@@ -339,7 +339,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="/index.php">
+          <a href="../index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>

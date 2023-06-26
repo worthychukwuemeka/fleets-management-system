@@ -312,7 +312,7 @@ if (is_array($data_type)) {
               <a class="active" style="color: #470A34;" href="../maintenance/maintenance-req.html">View Requests</a>
             </li>
             <li>
-              <a href="../maintenance/maintenance-history.php" style="color: #470A34;">View History</a>
+              <a href="./maintenance/maintenance-history.php" style="color: #470A34;">View History</a>
             </li>
           </ul>
         </li>
@@ -341,7 +341,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="/index.php">
+          <a href="../index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>

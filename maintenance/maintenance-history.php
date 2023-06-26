@@ -30,15 +30,15 @@ if (is_array($data_type)) {
     rel="stylesheet">
 
   <!-- Bootstrap icons -->
-  <link rel="stylesheet" href="../dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
+  <link rel="stylesheet" href="./dist/icons/bootstrap-icons-1.4.0/bootstrap-icons.min.css" type="text/css" />
   <!-- Bootstrap Docs -->
-  <link rel="stylesheet" href="../dist/css/bootstrap-docs.css" type="text/css" />
+  <link rel="stylesheet" href="./dist/css/bootstrap-docs.css" type="text/css" />
 
   <!-- Slick -->
-  <link rel="stylesheet" href="../libs/slick/slick.css" type="text/css" />
+  <link rel="stylesheet" href="./libs/slick/slick.css" type="text/css" />
 
   <!-- Main style file -->
-  <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css" />
+  <link rel="stylesheet" href="./dist/css/app.min.css" type="text/css" />
 
   <!--Hidden bootstrap style elements (Hid it because it is creating a pop up on the webpage that is not neccessary)-->
   <style>
@@ -264,7 +264,7 @@ if (is_array($data_type)) {
   <!-- menu -->
   <div class="menu">
     <div class="menu-header">
-      <a href="/index.php" class="menu-header-logo">
+      <a href="../index.php" class="menu-header-logo">
         <img src="../assets/images/fleeets.png" alt="logo" />
       </a>
       <a href="/index.php" class="btn btn-sm menu-close-btn">
@@ -312,7 +312,7 @@ if (is_array($data_type)) {
               <a style="color: #470A34;" href="../maintenance/maintenance-req.php">View Requests</a>
             </li>
             <li>
-              <a class="active" href="../maintenance/maintenance-history.php" style="color: #470A34;">View History</a>
+              <a class="active" href="./maintenance/maintenance-history.php" style="color: #470A34;">View History</a>
             </li>
           </ul>
         </li>
@@ -341,7 +341,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="/index.php">
+          <a href="../index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>
