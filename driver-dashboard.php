@@ -1,7 +1,7 @@
 <?php
 
-include("../php_DB/connect.php");
-include("../php_DB/profiles.php");
+include("./php_DB/connect.php");
+include("./php_DB/profiles.php");
 
 $id = 5555;
 $type = new Profiles();
@@ -246,7 +246,7 @@ if (is_array($data_type)) {
 
       <ul id="navLinks">
         <li>
-          <a class="active" href="/driver-dashboard/driver-dashboard.php">
+          <a class="active" href="./driver-dashboard.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-gauge"></i>
             </span>
@@ -262,7 +262,7 @@ if (is_array($data_type)) {
           </a>
           <ul>
             <li>
-              <a href="../maintenance//maintenance-history.php">View History</a>
+              <a href="./driver-maintenance/driver-maintenance.php">View History</a>
             </li>
           </ul>
         </li>
@@ -275,7 +275,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="../reports/reports.php">
+          <a href="#">
             <span class="nav-link-icon">
               <i class="fa-solid fa-user"></i>
             </span>
@@ -283,7 +283,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="/index.php">
+          <a href="../index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>
@@ -332,7 +332,7 @@ if (is_array($data_type)) {
           </div>
 
           <div class="avatar me-3">
-            <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="image" />
+            <img src="./vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="image" />
           </div>
         </a>
         <div class="dropdown-menu dropdown-menu-end">
@@ -358,7 +358,7 @@ if (is_array($data_type)) {
 
         <div class="card-body d-flex flex-wrap" style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); grid-gap: 10px;">
           <div style="grid-row: 1 / span 1; grid-column: 1 / span 2;">
-            <img src="../driver-dashboard/car.png" style="width: 144px; height: 144px; border-radius: 50%;">
+            <img src="./driver-dashboard/car.png" style="width: 144px; height: 144px; border-radius: 50%;">
           </div>
 
           <div class="container-1">

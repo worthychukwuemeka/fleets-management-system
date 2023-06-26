@@ -39,7 +39,7 @@
     </div>
     <a href="#" class="forgot-password">Forgot Password?</a>
     <a class="btn" style="text-decoration: none;" onclick="redirectToDashboard()" role="button">Login</a>
-    <button type="button" class="guest-button" onclick="continueAsGuest()">Continue as Guest</button>
+    <a class="btn" style="text-decoration: none; background: transparent; border: 2px solid #470A34; color:#470A34;" onclick="continueAsGuest()" role="button">Continue as Guest</a>
   </form>
 </div>
 
@@ -47,7 +47,7 @@
     <script src="https://kit.fontawesome.com/08d9b1877f.js" crossorigin="anonymous"></script>
 
     <!--Password eye toggler & Page redirect functions-->
-    <script src="./login-sign/scriptt.js"></script>
+    <script src="./login-sign/script.js"></script>
 </body>
 
 </html>

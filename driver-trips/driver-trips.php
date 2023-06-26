@@ -273,7 +273,7 @@ if (is_array($data_type)) {
 
       <ul id="navLinks">
         <li>
-          <a href="/driver-dashboard/driver-dashboard.php">
+          <a href="../driver-dashboard.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-gauge"></i>
             </span>
@@ -281,7 +281,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="/driver-maintenance/driver-maintenance.php">
+          <a href="#">
             <span class="nav-link-icon">
               <i class="fa-solid fa-wrench"></i>
             </span>
@@ -289,12 +289,12 @@ if (is_array($data_type)) {
           </a>
           <ul>
             <li>
-              <a style="color: #470A34;" href="/driver-maintenance/driver-maintenance.php">View History</a>
+              <a style="color: #470A34;" href="../driver-maintenance/driver-maintenance.php">View History</a>
             </li>
           </ul>
         </li>
         <li>
-          <a class="active" href="/driver-trips/driver-trips.php">
+          <a class="active" href="../driver-trips/driver-trips.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-car-side"></i>
             </span>
@@ -302,7 +302,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="../reports/reports.php">
+          <a href="#">
             <span class="nav-link-icon">
               <i class="fa-solid fa-user"></i>
             </span>
@@ -310,7 +310,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="/index.php">
+          <a href="../index.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-right-from-bracket"></i>
             </span>
