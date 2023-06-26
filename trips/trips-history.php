@@ -323,10 +323,10 @@ if (is_array($data_type)) {
           </a>
           <ul>
             <li>
-              <a class="active" style="color: #470A34;" href="../trips/trips-history.php">View Requests</a>
+              <a class="active" style="color: #470A34;" href="../trips/trips-history.php">View History</a>
             </li>
             <li>
-              <a href="../trips/trips-guest.php" style="color: #470A34;">View History</a>
+              <a href="../trips/trips-guest.php" style="color: #470A34;">View Guests Requests</a>
             </li>
           </ul>
         </li>
@@ -436,7 +436,7 @@ if (is_array($data_type)) {
                   <figure class="avatar me-3">
                     <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Ayotunde Babalola
+                  Abraham Daniel
                 </a>
               </td>
               <td>Senate Building</td>
@@ -456,7 +456,7 @@ if (is_array($data_type)) {
                   <figure class="avatar me-3">
                     <img src="../vehicles/assets/images/user/avatar.jpg" class="rounded-circle" alt="avatar" />
                   </figure>
-                  Ayotunde Babalola
+                  John Doe
                 </a>
               </td>
               <td>Esther Hall</td>

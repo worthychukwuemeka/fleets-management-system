@@ -323,10 +323,10 @@ if (is_array($data_type)) {
           </a>
           <ul>
             <li>
-              <a href="../maintenance/maintenance-req.html">View Requests</a>
+              <a href="../trips/trips-guest.php">View Requests</a>
             </li>
             <li>
-              <a href="./maintenance/maintenance-history.php">View History</a>
+              <a href="../trips/trips-history.php">View History</a>
             </li>
           </ul>
         </li>

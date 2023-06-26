@@ -25,5 +25,5 @@ function redirectToDashboard() {
 }
 
 function redirectToGuestPage() {
-  window.location.href = "./guest-form.html";
+  window.location.href = "../guest-form.html";
 }
