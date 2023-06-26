@@ -44,6 +44,12 @@ body a {
   text-align: center;
 }
 
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
 .header__title {
   margin-bottom: 30px;
   font-size: 2.1rem;
@@ -202,4 +208,26 @@ body a {
   transition-delay: 0s;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.btn {
+  width: 512px;
+  height: 47.25px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #470A34;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  line-height: 165.52%;
+}
+
+button:hover {
+  background-color: #663356;
 }
