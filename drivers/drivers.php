@@ -308,7 +308,7 @@ if (is_array($data_type)) {
               <a href="../maintenance/maintenance-req.php">View Requests</a>
             </li>
             <li>
-              <a href=".../maintenance/maintenance-history.php">View History</a>
+              <a href="../maintenance/maintenance-history.php">View History</a>
             </li>
           </ul>
         </li>

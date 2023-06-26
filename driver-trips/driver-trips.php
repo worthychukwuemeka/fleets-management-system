@@ -281,7 +281,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="../driver-maintenance/driver-maintenance.php">
             <span class="nav-link-icon">
               <i class="fa-solid fa-wrench"></i>
             </span>
@@ -340,7 +340,7 @@ if (is_array($data_type)) {
       </a>
       <!-- ./ Logo -->
 
-      <div class="page-title">Vehicles</div>
+      <div class="page-title">Trips</div>
 
       <div class="header-bar ms-auto">
         <ul class="navbar-nav justify-content-end">
@@ -377,17 +377,6 @@ if (is_array($data_type)) {
 
     <!-- content -->
     <div class="content">
-
-      <div class="card">
-        <div class="card-body">
-          <div class="d-md-flex gap-4 align-items-center">
-            <h4>Trips</h4>
-            <div class="dropdown ms-auto">
-              <a href="#" class="btn btn-primary" aria-haspopup="true" aria-expanded="false">Add New Trip</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="table-responsive">
         <table class="table table-custom table-lg mb-0" id="Vehicles">

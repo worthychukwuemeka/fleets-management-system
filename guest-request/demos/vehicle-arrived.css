@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: #FFFFFF;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  
+  .login-form {
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    gap: 20px;
+    background: #FFFFFF;
+    gap: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 165.52%;
+    color: #470A34;
+  }
+  
+  input {
+    width: 512px;
+    height: 50px;
+    padding: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+    border: 1px solid #6B6B6B;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .driver-button,
+  .fleetm-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 51px;
+    gap: 10px;
+  
+    width: 142px;
+    height: 51px;
+  
+    background: #FFFFFF;
+    border: 1px solid #6B6B6B;
+    border-radius: 30px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .driver-button:hover {
+    background: transparent;
+    color: #222;
+  }
+  
+  .fleetm-button:hover {
+    background: transparent;
+    color: #222;
+  }
+  
+  .forgot-password {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #470A34;
+  }
+  
+  .user-type label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .user-type select {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #6B6B6B;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #6B6B6B;
+    border-radius: 3px;
+  }
+  
+  .password-input {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+  }
+  
+  button,
+  .btn {
+    width: 512px;
+    height: 47.25px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #470A34;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  
+    line-height: 165.52%;
+  }
+  
+  button:hover {
+    background-color: #663356;
+  }
+  
+  .login-form > *:not(h1):not(button) {
+    margin-bottom: 10px;
+  }
+  
+  .guest-button {
+    background-color: #FFFFFF;
+    color: #470A34;
+    border: 1px solid #470A34;
+    justify-content: center;
+  }
+  
+  .guest-button:hover {
+    background-color: #663356;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
+  
+  

@@ -281,7 +281,7 @@ if (is_array($data_type)) {
           </a>
         </li>
         <li>
-          <a href="/driver-maintenance/driver-maintenance.php">
+          <a href="#">
             <span class="nav-link-icon">
               <i class="fa-solid fa-wrench"></i>
             </span>

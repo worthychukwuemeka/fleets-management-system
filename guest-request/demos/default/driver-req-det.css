@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .driver-details {
+    text-align: center;
+  }
+  
+  .profile-photo {
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .driver-info {
+    margin-top: 20px;
+  }
+  
+  .driver-field {
+    margin-bottom: 10px;
+  }
+  
+  .field-label {
+    font-weight: bold;
+  }
+  
+  .field-value {
+    margin-left: 10px;
+  }
+
+  .call-button {
+    display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #470a34;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .call-button:hover {
+    background-color: #470a344e;
+  }
+
+  button,
+.btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #470a34;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button:hover {
+  background-color: #663356;
+}
+  
